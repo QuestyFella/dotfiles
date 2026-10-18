@@ -1,0 +1,80 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  .pane { left: 24px; top: 18px; width: 380px; --hinge: center top; --enter: swing-in-top; --leave: swing-out-top; }
+  ul { list-style: none; margin: 0; padding: 0; max-height: 300px; overflow-y: auto; }
+  li { display: flex; gap: 8px; padding: 1px 4px; margin: 0 -4px; }
+  li .box { color: var(--accent); flex: none; }
+  li .txt { flex: 1; min-width: 0; overflow-wrap: anywhere; }
+  li .del { color: var(--dim); opacity: 0; flex: none; }
+  li:hover .del { opacity: 1; } li .del:hover { color: var(--red); }
+  li.done .box { color: var(--a4); } li.done .txt { color: var(--dim); text-decoration: line-through; }
+  li.sel { background: rgba(var(--accent-rgb), 0.22); }
+  li.new { animation: rowin .3s steps(4) both; }
+  .empty { color: var(--dim); padding: 2px 0 6px; }
+  .input { display: flex; gap: 8px; margin-top: 8px; padding-top: 8px;
+           border-top: 1px dashed rgba(var(--accent-rgb), 0.5); }
+  .input .p { color: var(--a4); }
+  input { flex: 1; background: none; border: 0; outline: none; padding: 0; font: inherit; color: var(--fg);
+          caret-color: var(--accent); }
+  input::placeholder { color: var(--dim); }
+  .keys { margin-top: 6px; font-size: 10.5px; color: var(--dim); }
+</style></head>
+<body>
+<div class="pane">
+  <div class="tag" id="tag"><span class="glyph">✓</span>todo</div>
+  <div class="close">[x]</div>
+  <ul id="list"></ul>
+  <div class="input"><span class="p">❯</span><input id="in" placeholder="add a task…" autocomplete="off" spellcheck="false"></div>
+  <div class="keys">⏎ add · ↑↓ select · ␣ toggle · ⌫ del · esc</div>
+  <div class="hint">⌃⌥⌘r</div>
+</div>
+<script src="base.js"></script>
+<script>
+  const $ = (id) => document.getElementById(id), input = $("in");
+  let items = [], sel = -1, fresh = -1;
+
+  function render() {
+    const done = items.filter((i) => i.done).length;
+    $("tag").innerHTML = `<span class="glyph">✓</span>todo · ${done}/${items.length}`;
+    $("list").innerHTML = items.length ? items.map((it, i) => `
+      <li class="${it.done ? "done" : ""} ${i === sel ? "sel" : ""} ${i === fresh ? "new" : ""}" data-i="${i}">
+        <span class="box">${it.done ? "[x]" : "[ ]"}</span><span class="txt">${esc(it.text)}</span><span class="del">✕</span>
+      </li>`).join("") : '<div class="empty">nothing to do. nice.</div>';
+    fresh = -1;
+    const s = $("list").querySelector(".sel"); if (s) s.scrollIntoView({ block: "nearest" });
+  }
+  const save = () => { send("save", { items }); render(); };
+
+  // from Lua (initial load and whenever ~/.config/todo.md changes on disk)
+  function update(list) { items = Array.isArray(list) ? list : []; if (sel >= items.length) sel = items.length - 1; render(); }
+  function focusInput() { input.focus(); }
+
+  $("list").addEventListener("click", (e) => {
+    const li = e.target.closest("li"); if (!li) return;
+    const i = +li.dataset.i;
+    if (e.target.classList.contains("del")) items.splice(i, 1);
+    else items[i].done = !items[i].done;
+    sel = -1; save(); input.focus();
+  });
+
+  input.addEventListener("keydown", (e) => {
+    const empty = input.value === "";
+    if (e.key === "Enter" && input.value.trim()) {
+      items.push({ text: input.value.trim(), done: false }); fresh = items.length - 1;
+      input.value = ""; sel = -1; save();
+    } else if (e.key === "ArrowDown" && items.length) { sel = Math.min(items.length - 1, sel + 1); render(); e.preventDefault(); }
+    else if (e.key === "ArrowUp" && items.length) { sel = Math.max(0, sel - 1); render(); e.preventDefault(); }
+    else if (e.key === " " && empty && sel >= 0) { items[sel].done = !items[sel].done; save(); e.preventDefault(); }
+    else if (e.key === "Backspace" && empty && sel >= 0) {
+      items.splice(sel, 1); sel = Math.min(sel, items.length - 1); save(); e.preventDefault();
+    }
+    else if (e.key === "Escape") { if (sel >= 0) { sel = -1; render(); } else send("hide"); }
+  });
+
+  window.onEnter = () => setTimeout(() => input.focus(), 50);
+  window.onLeave = () => { sel = -1; input.blur(); };
+  render();
+</script>
+</body></html>

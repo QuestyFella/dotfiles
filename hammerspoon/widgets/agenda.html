@@ -1,0 +1,91 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  .pane { left: 24px; top: 50%; translate: 0 -50%; width: 440px; --hinge: left center; --enter: swing-in-left; --leave: swing-out-left; }
+  .next { padding: 6px 8px; border: 1px dashed rgba(var(--accent-rgb), .55); margin-bottom: 8px; }
+  .next .title { font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .next .when { font-size: 18px; font-weight: 700; margin-top: 2px; }
+  .next .bar .fill { color: var(--accent); } .next .bar .rest { color: var(--dim); opacity: .5; }
+  .list { max-height: 260px; overflow-y: auto; }
+  .day { margin-top: 6px; color: var(--a2); font-weight: 700; }
+  .day .k { font-weight: 400; }
+  .ev { display: flex; gap: 8px; padding: 0 4px; margin: 0 -4px; cursor: pointer; }
+  .ev:hover { background: rgba(var(--accent-rgb), .18); }
+  .ev .t { color: var(--sub); flex: none; width: 5ch; }
+  .ev .c { flex: none; }
+  .ev .n { flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .ev.past .n, .ev.past .t { color: var(--dim); }
+  .ev.now .n { color: var(--accent); }
+  .foot { margin-top: 8px; font-size: 10.5px; color: var(--dim); display: flex; justify-content: space-between; }
+  .msg { padding: 14px 0; }
+</style></head>
+<body>
+<div class="pane">
+  <div class="tag"><span class="glyph">&#xF00ED;</span>agenda · next 7 days</div>
+  <div class="close">[x]</div>
+  <div id="body"><div class="msg sub">syncing calendars <span class="cursor"></span></div></div>
+  <div class="foot"><span id="synced"></span><span class="btn" id="refresh">[ ↻ ]</span></div>
+  <div class="hint">⌃⌥⌘a</div>
+</div>
+<script src="base.js"></script>
+<script>
+  const $ = (id) => document.getElementById(id);
+  const two = (n) => String(n).padStart(2, "0");
+  const hm = (d) => `${two(d.getHours())}:${two(d.getMinutes())}`;
+  const DAY = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"], MON = ["jan","feb","mar","apr","may","jun","jul","aug","sep","oct","nov","dec"];
+  const dayKey = (d) => `${d.getFullYear()}-${d.getMonth()}-${d.getDate()}`;
+  let data = null;
+
+  $("refresh").addEventListener("click", () => send("refresh"));
+  document.addEventListener("click", (e) => {
+    const ev = e.target.closest(".ev"); if (ev) send("open", { date: ev.dataset.date });
+  });
+
+  function until(ms) {
+    const m = Math.round(ms / 60000);
+    if (m < 1) return "now";
+    if (m < 60) return `${m}m`;
+    const h = Math.floor(m / 60);
+    return h < 24 ? `${h}h ${two(m % 60)}m` : `${Math.floor(h / 24)}d ${h % 24}h`;
+  }
+
+  function update(d) { data = d; render(); }
+  function failed(msg) { $("body").innerHTML = `<div class="msg"><span class="acc">err</span> ${esc(msg)}</div>`; }
+
+  function render() {
+    if (!data) return;
+    const now = new Date();
+    const evs = data.events.map((e) => ({ ...e, s: new Date(e.start), e: new Date(e.end) })).filter((e) => e.e > now);
+    const next = evs.find((e) => !e.allDay);
+    let head = "";
+    if (next) {
+      const on = next.s <= now;
+      const BAR = 36, n = on ? Math.round((now - next.s) / (next.e - next.s) * BAR) : 0;
+      head = `<div class="next row"><div class="k">${on ? "happening now" : "next up"}</div>
+        <div class="title acc">${esc(next.title)}</div>
+        <div class="when">${on ? "ends in " + until(next.e - now) : "in " + until(next.s - now)}
+          <span class="k" style="font-size:13px;font-weight:400">· ${hm(next.s)}–${hm(next.e)}${next.location ? " · " + esc(next.location) : ""}</span></div>
+        ${on ? `<div class="bar"><span class="fill">${"█".repeat(n)}</span><span class="rest">${"░".repeat(BAR - n)}</span></div>` : ""}</div>`;
+    }
+    let list = "", last = null;
+    const today = dayKey(now), tmr = dayKey(new Date(now.getTime() + 864e5));
+    for (const e of evs) {
+      const k = dayKey(e.s < now ? now : e.s);
+      if (k !== last) {
+        last = k;
+        const d = e.s < now ? now : e.s;
+        const label = k === today ? "today" : k === tmr ? "tomorrow" : DAY[d.getDay()];
+        list += `<div class="day">${label} <span class="k">${DAY[d.getDay()]} ${d.getDate()} ${MON[d.getMonth()]}</span></div>`;
+      }
+      const cls = e.s <= now && !e.allDay ? "now" : "";
+      list += `<div class="ev ${cls}" data-date="${e.s.getFullYear()}/${e.s.getMonth() + 1}/${e.s.getDate()}">
+        <span class="t">${e.allDay ? "all-d" : hm(e.s)}</span><span class="c" style="color:#${e.color || "888888"}">┃</span>
+        <span class="n">${esc(e.title)}</span></div>`;
+    }
+    $("body").innerHTML = head + `<div class="list">${list || '<div class="msg sub">nothing scheduled this week ☺</div>'}</div>`;
+    $("synced").textContent = `synced ${hm(new Date(data.synced * 1000))}`;
+  }
+  setInterval(render, 30000); // keep countdowns fresh
+</script>
+</body></html>

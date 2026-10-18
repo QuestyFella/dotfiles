@@ -1,0 +1,53 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  .pane { left: 24px; bottom: 24px; width: 470px; --hinge: left center; --enter: swing-in-left; --leave: swing-out-left; }
+  .prompt { color: var(--a4); }
+  .q { margin-top: 6px; font-size: 15px; line-height: 1.5; min-height: 46px; }
+  .q .ch { opacity: 0; animation: type .01s forwards; }
+  @keyframes type { to { opacity: 1 } }
+  .a { margin-top: 8px; text-align: right; opacity: 0; transition: opacity .4s; }
+  .a.show { opacity: 1; }
+  .refresh { position: absolute; top: 14px; right: 14px; }
+  .refresh.busy { animation: busy .8s steps(4) infinite; }
+  @keyframes busy { 50% { opacity: .3 } }
+</style></head>
+<body>
+<div class="pane">
+  <div class="tag"><span class="glyph">$</span>fortune</div>
+  <div class="close">[x]</div>
+  <div class="row"><span class="prompt">❯</span> <span class="sub" id="cmd">fortune --today</span></div>
+  <span class="btn refresh" id="refresh" title="new quote">[ ↻ ]</span>
+  <div class="q acc" id="q"></div>
+  <div class="a sub" id="a"></div>
+  <div class="hint">⌃⌥⌘q</div>
+</div>
+<script src="base.js"></script>
+<script>
+  let quote = { q: "", a: "" };
+  function update(q) { quote = q; }
+
+  document.getElementById("refresh").addEventListener("click", (e) => {
+    e.currentTarget.classList.add("busy");
+    document.getElementById("cmd").textContent = "fortune --random";
+    send("refresh");
+  });
+
+  // new quote arrived from the refresh button: type it out again
+  function retype() { document.getElementById("refresh").classList.remove("busy"); typeOut(.1); }
+
+  // type the quote out each time the pane swings in
+  window.onEnter = () => { document.getElementById("cmd").textContent = "fortune --today"; typeOut(); };
+  function typeOut(start = .8) { // start: seconds before typing (lets the swing-in land first)
+    const el = document.getElementById("q"), a = document.getElementById("a");
+    a.classList.remove("show");
+    a.textContent = "— " + (quote.a || "unknown");
+    const step = Math.min(30, 2000 / Math.max(1, quote.q.length));
+    el.innerHTML = [...`"${quote.q}"`].map((c, i) =>
+      `<span class="ch" style="animation-delay:${start + i * step / 1000}s">${esc(c)}</span>`).join("")
+      + '<span class="cursor"></span>';
+    setTimeout(() => a.classList.add("show"), start * 1000 + (quote.q.length + 2) * step + 150);
+  }
+</script>
+</body></html>

@@ -1,0 +1,1 @@
+-- MCU filetype settings are registered early in mcu.setup().

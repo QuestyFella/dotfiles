@@ -1,0 +1,17 @@
+#!/bin/zsh
+# Run by AeroSpace on focus change. Wine (EASy68K) windows often have no title yet when
+# AeroSpace first sees them, so on-window-detected can't tell main windows from popups;
+# fix their layout here once the titles exist. AeroSpace also never hears that a Wine
+# process quit, so drop windows whose process is gone (they'd hold empty tiles).
+sleep 0.4
+A=/opt/homebrew/bin/aerospace
+$A list-windows --all --format '%{window-id}|%{app-name}|%{app-pid}|%{window-layout}|%{window-title}' |
+while IFS='|' read -r id app pid layout title; do
+  [[ $app == *wine* ]] || continue
+  if ! kill -0 $pid 2>/dev/null; then $A close --window-id $id; continue; fi
+  if [[ $title =~ '^(EASy68K Editor|EASy68K Simulator|Sim68K I/O)|\.[Ss]68$' ]]; then  # simulator is titled <file>.S68
+    [[ $layout == floating ]] && $A layout tiling --window-id $id
+  elif [[ -n $title && $layout != floating ]]; then
+    $A layout floating --window-id $id
+  fi
+done

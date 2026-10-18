@@ -1,0 +1,107 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  .pane { left: 50%; translate: -50% 0; top: 18px; width: 440px; --hinge: center top; --enter: swing-in-top; --leave: swing-out-top; }
+  .task { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  pre.clock { margin: 10px 0 6px; font: inherit; font-size: 15px; line-height: 1; letter-spacing: -1px; text-align: center;
+              color: var(--accent); text-shadow: 0 0 14px rgba(var(--accent-rgb), .6); }
+  .break pre.clock { color: var(--a4); text-shadow: 0 0 14px rgba(var(--a4-rgb), .6); }
+  .paused pre.clock { animation: blink 1.2s steps(1) infinite; }
+  .bar { text-align: center; } .bar .fill { color: var(--accent); } .break .bar .fill { color: var(--a4); }
+  .bar .rest { color: var(--dim); opacity: .5; }
+  .meta { display: flex; justify-content: space-between; margin-top: 4px; }
+  .dots .on { color: var(--accent); } .dots .off { color: var(--dim); }
+  .ctl { text-align: center; margin-top: 8px; }
+  .picker { margin-top: 8px; border-top: 1px dashed rgba(var(--accent-rgb), .5); padding-top: 6px; max-height: 120px; overflow-y: auto; }
+  .picker div { padding: 0 4px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .picker div:hover { background: var(--accent); color: var(--bg); }
+  .picker .cur { color: var(--accent); }
+  .cfg { margin-top: 8px; border-top: 1px dashed rgba(var(--accent-rgb), .5); padding-top: 6px;
+         display: grid; grid-template-columns: 1fr 1fr; gap: 2px 18px; }
+  .cfg .set { display: flex; justify-content: space-between; }
+  .cfg .v { display: inline-block; min-width: 4ch; text-align: center; color: var(--fg); }
+  .cfg .all { grid-column: 1 / -1; text-align: center; margin-top: 4px; }
+  .cfg .all .btn:hover { background: var(--red); }
+  .ask { margin-top: 8px; padding: 6px 8px; border: 1px dashed var(--a4); }
+  .ask .btn { margin-right: 6px; }
+</style></head>
+<body>
+<div class="pane" id="pane">
+  <div class="tag" id="tag"><span class="glyph">&#xF051B;</span>pomodoro</div>
+  <div class="close">[x]</div>
+  <div class="row task"><span class="k">task</span> <span id="task" class="sub">— none —</span> <span class="btn" id="change">[ pick ]</span></div>
+  <pre class="clock row" id="clock"></pre>
+  <div class="row bar" id="bar"></div>
+  <div class="row meta"><span class="dots" id="dots"></span><span class="k" id="phase">focus</span></div>
+  <div class="row ctl" id="ctl"></div>
+  <div class="picker" id="picker" hidden></div>
+  <div class="cfg" id="cfg" hidden></div>
+  <div class="ask" id="ask" hidden></div>
+  <div class="hint">⌃⌥⌘p</div>
+</div>
+<script src="base.js"></script>
+<script>
+  const $ = (id) => document.getElementById(id);
+  const FONT = {
+    0: ["████", "█  █", "█  █", "█  █", "████"], 1: ["  █ ", " ██ ", "  █ ", "  █ ", " ███"],
+    2: ["████", "   █", "████", "█   ", "████"], 3: ["████", "   █", " ███", "   █", "████"],
+    4: ["█  █", "█  █", "████", "   █", "   █"], 5: ["████", "█   ", "████", "   █", "████"],
+    6: ["████", "█   ", "████", "█  █", "████"], 7: ["████", "   █", "  █ ", " █  ", " █  "],
+    8: ["████", "█  █", "████", "█  █", "████"], 9: ["████", "█  █", "████", "   █", "████"],
+    ":": ["  ", "██", "  ", "██", "  "],
+  };
+  const big = (str) => [0, 1, 2, 3, 4].map((r) => [...str].map((c) => FONT[c][r]).join("  ")).join("\n");
+  const two = (n) => String(n).padStart(2, "0");
+  const BAR = 34;
+  let st = {}, picking = false, config = false;
+
+  $("change").addEventListener("click", () => { picking = !picking; config = false; render(); });
+  document.addEventListener("click", (e) => {
+    const b = e.target.closest("[data-a]"); if (!b) return;
+    if (b.dataset.a === "pick") { picking = false; send("pick", { task: b.dataset.task || null }); }
+    else if (b.dataset.a === "cfg") { config = !config; picking = false; render(); }
+    else if (b.dataset.a === "set") send("set", { key: b.dataset.k, dir: +b.dataset.d });
+    else send(b.dataset.a);
+  });
+
+  function update(s) { st = s; render(); }
+
+  function render() {
+    const s = st; if (!s.phase) return;
+    const brk = s.phase !== "focus";
+    $("pane").classList.toggle("break", brk);
+    $("pane").classList.toggle("paused", !s.running && s.left !== s.total);
+    $("tag").innerHTML = `<span class="glyph">${brk ? "☕" : "\u{F051B}"}</span>pomodoro · ${brk ? (s.phase === "long" ? "long break" : "break") : "focus"}`;
+    $("task").textContent = s.task || "— none —";
+    $("task").className = s.task ? "acc" : "sub";
+    $("clock").textContent = big(`${two(Math.floor(s.left / 60))}:${two(s.left % 60)}`);
+    const n = Math.round((1 - s.left / s.total) * BAR);
+    $("bar").innerHTML = `<span class="fill">${"█".repeat(n)}</span><span class="rest">${"░".repeat(BAR - n)}</span>`;
+    // sessions done in the current set of `every` (full set while on the long break)
+    const done = s.sessions === 0 ? 0 : (s.sessions % s.every === 0 && brk ? s.every : s.sessions % s.every);
+    $("dots").innerHTML = Array.from({ length: s.every }, (_, i) => `<span class="${i < done ? "on" : "off"}">●</span>`).join(" ")
+      + ` <span class="k">${s.sessions} done</span>`;
+    $("phase").textContent = s.running ? (brk ? "on a break" : "focusing") : (s.left === s.total ? "ready" : "paused");
+    $("ctl").innerHTML = (s.running ? `<span class="btn" data-a="pause">[ ⏸ pause ]</span>` : `<span class="btn" data-a="start">[ ▶ ${s.left === s.total ? "start" : "resume"} ]</span>`)
+      + ` <span class="btn" data-a="reset">[ ↺ reset ]</span> <span class="btn" data-a="skip">[ ⏭ skip ]</span>`
+      + ` <span class="btn" data-a="cfg" title="durations · reset all">[ ${config ? "×" : "⚙"} ]</span>`;
+    const cfg = $("cfg"); cfg.hidden = !config;
+    if (config) {
+      const d = s.durations, step = (k, label, val) => `<div class="set"><span class="k">${label}</span><span>`
+        + `<span class="btn" data-a="set" data-k="${k}" data-d="-1">-</span><span class="v">${val}</span>`
+        + `<span class="btn" data-a="set" data-k="${k}" data-d="1">+</span></span></div>`;
+      cfg.innerHTML = step("focus", "focus", d.focus + "m") + step("short", "break", d.short + "m")
+        + step("long", "long break", d.long + "m") + step("every", "long every", s.every)
+        + `<div class="all"><span class="btn" data-a="resetAll">[ ⟲ reset all — new set, 0 done ]</span></div>`;
+    }
+    const pk = $("picker"); pk.hidden = !picking;
+    if (picking) pk.innerHTML = (s.tasks.length ? s.tasks.map((t) =>
+        `<div data-a="pick" data-task="${esc(t).replace(/"/g, "&quot;")}" class="${t === s.task ? "cur" : ""}">❯ ${esc(t)}</div>`).join("")
+        : `<div class="k">todo list is empty — add tasks with ⌃⌥⌘r</div>`) + `<div data-a="pick" class="k">❯ no task</div>`;
+    const ask = $("ask"); ask.hidden = !s.ask;
+    if (s.ask) ask.innerHTML = `<div>session done! finished <span class="acc">${esc(s.task)}</span>?</div>
+      <div style="margin-top:4px"><span class="btn" data-a="done">[ ✓ yes, tick it off ]</span><span class="btn" data-a="keep">[ not yet ]</span></div>`;
+  }
+</script>
+</body></html>

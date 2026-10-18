@@ -1,0 +1,4 @@
+/* Spicetify "Rice" theme — colours are generated into color.ini by ~/.local/bin/theme.
+   Add Spotify CSS tweaks here; they apply on the next theme switch or `spicetify apply`. */
+.main-rootlist-rootlistItem,
+.main-card-card { border-radius: 8px; }

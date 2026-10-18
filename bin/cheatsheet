@@ -1,0 +1,18 @@
+#!/bin/zsh
+# Triggered by Karabiner (Hyper + /): toggle a floating Alacritty window showing ~/.config/SHORTCUTS.md.
+# Close it with q, or press the shortcut again.
+export PATH=/opt/homebrew/bin:$PATH
+TITLE="Shortcuts"
+SHEET=$HOME/.config/SHORTCUTS.md
+ALACRITTY=/Applications/Alacritty.app/Contents/MacOS/alacritty
+
+# Already open? Close it.
+id=$(aerospace list-windows --all --format '%{window-id}|%{app-name}|%{window-title}' 2>/dev/null \
+     | awk -F'|' -v t="$TITLE" '$2=="Alacritty" && $3==t {print $1; exit}')
+if [[ -n $id ]]; then aerospace close --window-id $id; exit; fi
+
+style=$(cat $HOME/.config/themes/current/mode 2>/dev/null || echo dark)
+cmd=(/bin/zsh -c "PAGER='less -R' /opt/homebrew/bin/glow -p -s $style -w 92 '$SHEET'")
+opts=(--title "$TITLE" -o window.dynamic_title=false -o 'window.dimensions={columns=100,lines=46}')
+if pgrep -xq alacritty && $ALACRITTY msg create-window $opts -e $cmd; then exit; fi
+open -na /Applications/Alacritty.app --args $opts -e $cmd

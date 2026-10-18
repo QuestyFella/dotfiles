@@ -1,0 +1,9 @@
+#!/bin/sh
+# Triggered by Karabiner (Ctrl+Option+Cmd+T): new Alacritty window, launching it if needed.
+exec >>/tmp/alacritty-new-window.log 2>&1
+echo "--- $(date)"
+ALACRITTY=/Applications/Alacritty.app/Contents/MacOS/alacritty
+if /usr/bin/pgrep -xq alacritty && "$ALACRITTY" msg create-window; then
+  exit 0
+fi
+/usr/bin/open -a /Applications/Alacritty.app

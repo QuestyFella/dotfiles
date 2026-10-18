@@ -1,0 +1,104 @@
+#!/bin/zsh
+# SketchyBar config. Colours come from the active theme (~/.config/themes/current/palette.sh);
+# `theme <name>` swaps the palette and runs `sketchybar --reload`.
+
+PLUGIN_DIR="$HOME/.config/sketchybar/plugins"
+source "$PLUGIN_DIR/colors.sh"
+FONT="Hack Nerd Font"
+
+sketchybar --bar position=top height=34 color=$(c $BASE dd) blur_radius=30 \
+                 border_width=0 shadow=off topmost=off sticky=on padding_left=8 padding_right=8
+
+sketchybar --default icon.font="$FONT:Bold:16.0" label.font="$FONT:Bold:13.0" \
+                     icon.color=$(c $TEXT) label.color=$(c $TEXT) \
+                     icon.padding_left=6 icon.padding_right=4 label.padding_left=4 label.padding_right=6 \
+                     background.height=24 background.corner_radius=8 padding_left=3 padding_right=3
+
+# ── Left: logo + AeroSpace workspaces + focused app ─────────────────────────
+# Logo: click for an Apple-style menu (restart/shut down/log out ask to confirm first).
+sketchybar --add item logo left \
+           --set logo icon=$'\U000F0035' icon.color=$(c $ACCENT) label.drawing=off \
+                      popup.background.color=$(c $MANTLE ee) popup.background.corner_radius=10 \
+                      popup.background.border_width=2 popup.background.border_color=$(c $ACCENT) \
+                      popup.blur_radius=30 popup.y_offset=4 \
+                      click_script="sketchybar --set logo popup.drawing=toggle" \
+                      script="sketchybar --set logo popup.drawing=off" \
+           --subscribe logo mouse.exited.global
+menu_item() { # id icon label command
+  sketchybar --add item logo.$1 popup.logo \
+             --set logo.$1 icon=$2 icon.color=$(c $ACCENT) icon.width=34 icon.padding_left=12 icon.padding_right=0 \
+                           label="$3" label.padding_right=16 background.height=28 \
+                           click_script="sketchybar --set logo popup.drawing=off; $4"
+}
+menu_item about    $'\U000F02FC' "About This Mac"   "open 'x-apple.systempreferences:com.apple.SystemProfiler.AboutExtension'"
+menu_item settings $'\U000F0493' "System Settings…" "open -a 'System Settings'"
+menu_item activity $'\U000F0128' "Activity Monitor" "open -a 'Activity Monitor'"
+menu_item keys     $'\U000F030C' "Shortcuts"        "$HOME/.local/bin/cheatsheet"
+menu_item sleep    $'\U000F04B2' "Sleep"            "pmset sleepnow"
+menu_item lock     $'\U000F033E' "Lock Screen"      "pmset displaysleepnow"
+menu_item restart  $'\U000F0709' "Restart…"         "osascript -e 'tell app \"loginwindow\" to «event aevtrrst»'"
+menu_item shutdown $'\U000F0425' "Shut Down…"       "osascript -e 'tell app \"loginwindow\" to «event aevtrsdn»'"
+menu_item logout   $'\U000F0343' "Log Out…"         "osascript -e 'tell app \"loginwindow\" to «event aevtlogo»'"
+
+sketchybar --add event aerospace_workspace_change
+# Every workspace bound in aerospace.toml (lettered ones only exist while in use).
+for sid in $(grep -o "= 'workspace [^ ']*'" ~/.config/aerospace/aerospace.toml | cut -d' ' -f3 | tr -d "'" | awk '!seen[$0]++'); do
+  sketchybar --add item space.$sid left \
+             --set space.$sid label="$sid" icon.drawing=off label.padding_left=9 label.padding_right=9 \
+                              background.drawing=off click_script="/opt/homebrew/bin/aerospace workspace $sid"
+done
+sketchybar --add item spaces left \
+           --set spaces drawing=off updates=on script="$PLUGIN_DIR/spaces.sh" \
+           --subscribe spaces aerospace_workspace_change front_app_switched space_windows_change system_woke
+
+sketchybar --add item front_app left \
+           --set front_app icon.drawing=off label.color=$(c $SUBTEXT1) padding_left=10 script="$PLUGIN_DIR/front_app.sh" \
+           --subscribe front_app front_app_switched
+
+# ── Right (added right-to-left): clock, battery, volume, VPN ────────────────
+sketchybar --add item clock right \
+           --set clock icon=$'\U000F0954' icon.color=$(c $LAVENDER) update_freq=15 script="$PLUGIN_DIR/clock.sh"
+
+sketchybar --add item battery right \
+           --set battery update_freq=60 script="$PLUGIN_DIR/battery.sh" \
+           --subscribe battery power_source_change system_woke
+
+sketchybar --add item volume right \
+           --set volume icon.color=$(c $PEACH) script="$PLUGIN_DIR/volume.sh" \
+           --subscribe volume volume_change
+
+# Pomodoro countdown (driven by ~/.hammerspoon/widgets.lua; hidden when idle). Click: open the widget.
+sketchybar --add item pomo right \
+           --set pomo drawing=off icon.color=$(c $ACCENT) label.color=$(c $TEXT) \
+                      click_script="open -g hammerspoon://pomo"
+
+sketchybar --add event vpn_change
+sketchybar --add item vpn right \
+           --set vpn icon=$'\U000F0582' label="PC" update_freq=20 script="$PLUGIN_DIR/vpn.sh" \
+                     click_script="$HOME/.local/bin/wireguard-toggle" \
+           --subscribe vpn vpn_change system_woke
+
+# ── Theme dropdown: click the palette icon, pick a theme ────────────────────
+sketchybar --add item theme right \
+           --set theme icon=$'\U000F03D8' icon.color=$(c $ACCENT) label.drawing=off \
+                       popup.background.color=$(c $MANTLE ee) popup.background.corner_radius=10 \
+                       popup.background.border_width=2 popup.background.border_color=$(c $ACCENT) \
+                       popup.blur_radius=30 popup.y_offset=4 \
+                       click_script="sketchybar --set theme popup.drawing=toggle" \
+                       script="sketchybar --set theme popup.drawing=off" \
+           --subscribe theme mouse.exited.global
+current=$(cat ~/.config/themes/current/name 2>/dev/null)
+for name in $(ls ~/.config/themes/palettes | sed 's/\.sh$//' | sort); do
+  f=~/.config/themes/palettes/$name.sh
+  label=$(source $f; echo $THEME_LABEL); dot=$(source $f; echo $ACCENT); dotbg=$(source $f; echo $BASE)
+  [[ $name == $current ]] && check=$'  \U000F012C' || check=""
+  sketchybar --add item theme.$name popup.theme \
+             --set theme.$name icon="●" icon.color=0xff$dot icon.font="Hack Nerd Font:Bold:18.0" \
+                               icon.background.color=0xff$dotbg icon.background.corner_radius=6 icon.background.height=22 \
+                               icon.padding_left=10 icon.padding_right=8 \
+                               label="$label$check" label.padding_right=14 \
+                               background.height=28 \
+                               click_script="sketchybar --set theme popup.drawing=off; nohup $HOME/.local/bin/theme $name >/dev/null 2>&1 &"
+done
+
+sketchybar --update

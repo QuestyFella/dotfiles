@@ -1,0 +1,46 @@
+---
+title: "R Lecture Notes"
+format:
+  pdf:
+    pdf-engine: tectonic
+    latex-auto-mk: false
+    number-sections: true
+    colorlinks: true
+execute:
+  echo: true
+  warning: false
+  message: false
+---
+
+# Summary
+
+Write your notes here. R chunks calculate results and generate plots in the PDF.
+
+For observations $x_1,\ldots,x_n$, the sample mean is
+
+$$
+\bar{x} = \frac{1}{n}\sum_{i=1}^{n}x_i.
+$$
+
+# R calculations
+
+```{r}
+x <- c(2, 4, 4, 4, 5, 5, 7, 9)
+mean(x)
+sd(x)
+summary(x)
+```
+
+# A plot
+
+```{r}
+#| fig-width: 6
+#| fig-height: 3
+plot(cars$speed, cars$dist,
+     pch = 19, col = "steelblue",
+     xlab = "Speed (mph)", ylab = "Stopping distance (ft)",
+     main = "Speed and stopping distance")
+abline(lm(dist ~ speed, data = cars), col = "tomato", lwd = 2)
+```
+
+Edit this sentence, save, and render again to check the preview.

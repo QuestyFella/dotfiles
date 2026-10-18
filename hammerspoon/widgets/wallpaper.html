@@ -1,0 +1,82 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  .pane { left: 20px; right: 20px; top: 18px; bottom: 18px; --hinge: center top; --enter: swing-in-top; --leave: swing-out-top;
+          display: flex; flex-direction: column; }
+  .grid { flex: 1; display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; overflow-y: auto;
+          padding: 6px 4px 4px; align-content: start; }
+  .wp { position: relative; aspect-ratio: 16 / 10; border: 1.5px solid rgba(var(--fg-rgb), 0.12);
+        background: var(--bg2) center / cover no-repeat; transition: border-color .12s, transform .12s, box-shadow .12s; }
+  .wp:hover { border-color: rgba(var(--accent-rgb), 0.6); }
+  .wp.sel { border-color: var(--accent); transform: scale(1.03);
+            box-shadow: 0 0 0 3px rgba(var(--accent-rgb), 0.25), 0 0 18px rgba(var(--accent-rgb), 0.45); }
+  .wp .name { position: absolute; left: 0; right: 0; bottom: 0; padding: 2px 6px; font-size: 10.5px;
+              background: rgba(var(--bg-rgb), 0.85); color: var(--sub);
+              white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .wp.sel .name { color: var(--fg); }
+  .wp .now { position: absolute; top: 4px; right: 4px; padding: 0 5px; font-size: 10px; line-height: 15px;
+             background: var(--a4); color: var(--bg); font-weight: 700; }
+  .wp.loading { animation: pulse 1s ease-in-out infinite alternate; }
+  @keyframes pulse { to { background-color: var(--surface) } }
+  .empty { color: var(--dim); padding: 8px 2px; }
+  .keys { margin-top: 8px; font-size: 10.5px; color: var(--dim); }
+</style></head>
+<body>
+<div class="pane">
+  <div class="tag" id="tag"><span class="glyph">󰸉</span>wallpaper</div>
+  <div class="close">[x]</div>
+  <div class="grid" id="grid"></div>
+  <div class="keys">←↑↓→ / hjkl move · ⏎ set · click to set · esc close · add images: theme --wallpaper &lt;file…&gt;</div>
+  <div class="hint">⌃⌥⌘g</div>
+</div>
+<script src="base.js"></script>
+<script>
+  const $ = (id) => document.getElementById(id);
+  let items = [], sel = 0;
+  const COLS = 3;
+
+  function render() {
+    $("grid").innerHTML = items.length ? items.map((it, i) => `
+      <div class="wp ${i === sel ? "sel" : ""} ${it.thumb ? "" : "loading"}" data-i="${i}"
+           style="${it.thumb ? `background-image:url('${it.thumb}')` : ""}">
+        ${it.current ? '<span class="now">now</span>' : ""}
+        <div class="name">${esc(it.name)}</div>
+      </div>`).join("") : '<div class="empty">no wallpapers for this theme yet — theme --wallpaper &lt;image…&gt;</div>';
+    const s = $("grid").querySelector(".sel"); if (s) s.scrollIntoView({ block: "nearest" });
+  }
+
+  // from Lua: list for the current theme (thumbs arrive later via thumb())
+  function update(d) {
+    items = d.items || [];
+    $("tag").innerHTML = `<span class="glyph">󰸉</span>wallpaper · ${esc(d.theme)} · ${items.length}`;
+    sel = Math.max(0, items.findIndex((it) => it.current));
+    render();
+  }
+  function thumb(t) {
+    const it = items[t.i]; if (!it) return;
+    it.thumb = t.url;
+    const el = $("grid").querySelector(`[data-i="${t.i}"]`);
+    if (el) { el.style.backgroundImage = `url('${t.url}')`; el.classList.remove("loading"); }
+  }
+  function applied(i) { items.forEach((it, j) => (it.current = j === i)); render(); }
+
+  // from Lua's modal hotkeys (work without the window having keyboard focus)
+  function key(k) {
+    if (!items.length) return;
+    const n = items.length;
+    if (k === "left") sel = (sel - 1 + n) % n;
+    else if (k === "right") sel = (sel + 1) % n;
+    else if (k === "up") sel = sel - COLS >= 0 ? sel - COLS : sel;
+    else if (k === "down") sel = sel + COLS < n ? sel + COLS : sel;
+    else if (k === "enter") { send("set", { i: sel }); return; }
+    render();
+  }
+
+  $("grid").addEventListener("click", (e) => {
+    const el = e.target.closest(".wp"); if (!el) return;
+    sel = +el.dataset.i; render(); send("set", { i: sel });
+  });
+  render();
+</script>
+</body></html>

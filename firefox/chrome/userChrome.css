@@ -1,0 +1,32 @@
+/* Firefox styling for the desktop theme switcher (~/.local/bin/theme).
+   Colours are set live by Pywalfox; this file only adds shape and accents, using
+   Firefox's theme variables so it follows whatever theme is active. */
+
+:root {
+  --rice-accent: var(--lwt-tab-line-color, var(--toolbar-field-focus-border-color, AccentColor));
+  --rice-radius: 8px;
+}
+
+/* Tabs: rounded, with an accent underline on the selected tab */
+.tab-background {
+  border-radius: var(--rice-radius) !important;
+  margin-block: 4px !important;
+}
+.tab-background:is([selected], [multiselected]) {
+  box-shadow: inset 0 -2px 0 var(--rice-accent) !important;
+}
+
+/* URL bar: rounded, accent outline while focused */
+#urlbar-background {
+  border-radius: var(--rice-radius) !important;
+}
+#urlbar[focused] > #urlbar-background {
+  outline: 2px solid var(--rice-accent) !important;
+  outline-offset: -2px !important;
+}
+
+/* Flatter toolbars */
+#nav-bar {
+  border-top: none !important;
+  box-shadow: none !important;
+}

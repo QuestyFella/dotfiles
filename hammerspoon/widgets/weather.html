@@ -1,0 +1,134 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  .pane { right: 24px; top: 18px; width: 380px; --hinge: center top; --enter: swing-in-top; --leave: swing-out-top; }
+  .top { display: flex; gap: 18px; align-items: center; }
+  pre.art { margin: 0; font: inherit; line-height: 1.2; white-space: pre; }
+  .sun { color: var(--warn); text-shadow: 0 0 12px rgba(var(--warn-rgb), 0.7); }
+  .cloud { color: var(--sub); } .rain { color: var(--a2); } .snow { color: var(--fg); } .bolt { color: var(--warn); }
+  .temp { font-size: 30px; font-weight: 700; line-height: 1; }
+  table { border-collapse: collapse; margin-top: 4px; } td { padding: 0 10px 0 0; }
+  .hours { display: grid; grid-template-columns: repeat(6, 1fr); text-align: center; margin-top: 10px;
+           border-top: 1px dashed rgba(var(--accent-rgb), 0.5); padding-top: 8px; }
+  .msg { padding: 24px 0; }
+</style></head>
+<body>
+<div class="pane">
+  <div class="tag" id="tag"><span class="glyph">☼</span>weather</div>
+  <div class="close">[x]</div>
+  <div id="body"><div class="msg sub">fetching forecast <span class="cursor"></span></div></div>
+  <div class="hint">⌃⌥⌘w</div>
+</div>
+<script src="base.js"></script>
+<script>
+  // wttr.in-style ASCII art; each kind has two frames that alternate
+  const ART = {
+    sun: [
+`    \\   /
+     .-.
+  ― (   ) ―
+     \`-'
+    /   \\    `,
+`    \\ | /
+     .-.
+  ‒ (   ) ‒
+     \`-'
+    / | \\    `],
+    cloud: [
+`
+     .--.
+  .-(    ).
+ (___.__)__)
+             `,
+`
+      .--.
+   .-(    ).
+  (___.__)__)
+             `],
+    fog: [
+`
+ _ - _ - _ -
+  _ - _ - _
+ _ - _ - _ -
+             `,
+`
+  - _ - _ - _
+ - _ - _ - _
+  - _ - _ - _
+             `],
+    rain: [
+`     .-.
+    (   ).
+   (___(__)
+    ‚'‚'‚'‚
+    ‚'‚'‚'   `,
+`     .-.
+    (   ).
+   (___(__)
+     '‚'‚'‚'
+    '‚'‚'‚'  `],
+    snow: [
+`     .-.
+    (   ).
+   (___(__)
+    *  *  *
+   *  *  *   `,
+`     .-.
+    (   ).
+   (___(__)
+     *  *  *
+    *  *  *  `],
+    storm: [
+`     .-.
+    (   ).
+   (___(__)
+    ⚡'‚⚡'‚
+    ‚'‚'‚'   `,
+`     .-.
+    (   ).
+   (___(__)
+     '‚'‚'‚
+    '‚'‚'‚'  `],
+  };
+  const CLS = { sun: "sun", cloud: "cloud", fog: "cloud", rain: "rain", snow: "snow", storm: "bolt" };
+  const WMO = (c, day) => {
+    if (c === 0) return [day ? "sun" : "cloud", day ? "clear" : "clear night", day ? "☀" : "☾"];
+    if (c <= 2) return ["cloud", c === 1 ? "mostly clear" : "partly cloudy", "⛅"];
+    if (c === 3) return ["cloud", "overcast", "☁"];
+    if (c <= 48) return ["fog", "fog", "≡"];
+    if (c <= 57) return ["rain", "drizzle", "☂"];
+    if (c <= 67) return ["rain", "rain", "☂"];
+    if (c <= 77) return ["snow", "snow", "❄"];
+    if (c <= 82) return ["rain", "showers", "☂"];
+    if (c <= 86) return ["snow", "snow showers", "❄"];
+    return ["storm", "thunderstorm", "ϟ"];
+  };
+  const r = Math.round;
+  let kind = null, frame = 0;
+  setInterval(() => {
+    const el = document.getElementById("art");
+    if (el && kind) { frame ^= 1; el.textContent = ART[kind][frame]; }
+  }, 450);
+
+  function update(w) {
+    const cur = w.current, u = w.current_units, [k, label] = WMO(cur.weather_code, cur.is_day);
+    kind = k;
+    document.getElementById("tag").innerHTML = `<span class="glyph">☼</span>weather · ${esc((w.city || "").toLowerCase())}`;
+    const h = w.hourly, hours = h.time.slice(1, 7).map((t, i) =>
+      `<div><span class="k">${t.slice(11, 13)}h</span><br>${WMO(h.weather_code[i + 1], h.is_day[i + 1])[2]}<br>${r(h.temperature_2m[i + 1])}°</div>`).join("");
+    document.getElementById("body").innerHTML = `
+      <div class="top row"><pre class="art ${CLS[k]}" id="art">${ART[k][0]}</pre>
+        <div><div class="temp acc">${r(cur.temperature_2m)}${u.temperature_2m}</div>
+          <div class="sub">${label}</div>
+          <table>
+            <tr><td class="k">feels</td><td>${r(cur.apparent_temperature)}°</td></tr>
+            <tr><td class="k">wind</td><td>${r(cur.wind_speed_10m)} ${u.wind_speed_10m}</td></tr>
+            <tr><td class="k">humid</td><td>${cur.relative_humidity_2m}%</td></tr>
+          </table></div></div>
+      <div class="hours row">${hours}</div>`;
+  }
+
+  function failed(msg) { document.getElementById("body").innerHTML = `<div class="msg"><span class="acc">err</span> ${esc(msg)}</div>`; }
+</script>
+</body></html>

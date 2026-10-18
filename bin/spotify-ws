@@ -1,0 +1,4 @@
+#!/bin/zsh
+# Triggered by Karabiner (Hyper + S): go to workspace S and open Spotify.
+/opt/homebrew/bin/aerospace workspace S
+/usr/bin/open -a /Applications/Spotify.app

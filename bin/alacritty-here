@@ -1,0 +1,11 @@
+#!/bin/sh
+# Triggered by Karabiner (Ctrl+Option+Cmd+F): open Alacritty in the front Finder window's folder.
+exec >>/tmp/alacritty-new-window.log 2>&1
+echo "--- $(date) (here)"
+DIR=$(/usr/bin/osascript -e 'tell application "Finder" to if (count of Finder windows) > 0 then get POSIX path of (target of front Finder window as alias)')
+[ -d "$DIR" ] || DIR="$HOME"
+ALACRITTY=/Applications/Alacritty.app/Contents/MacOS/alacritty
+if /usr/bin/pgrep -xq alacritty && "$ALACRITTY" msg create-window --working-directory "$DIR"; then
+  exit 0
+fi
+/usr/bin/open -na /Applications/Alacritty.app --args --working-directory "$DIR"

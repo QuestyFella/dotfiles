@@ -1,0 +1,11 @@
+#!/bin/sh
+# Triggered by Karabiner (Ctrl+Option+Cmd+V): toggle the "PC" WireGuard tunnel.
+TUNNEL="PC"
+if /usr/sbin/scutil --nc status "$TUNNEL" | /usr/bin/head -1 | /usr/bin/grep -q '^Connected'; then
+  /usr/sbin/scutil --nc stop "$TUNNEL" && MSG="disconnected"
+else
+  /usr/sbin/scutil --nc start "$TUNNEL" && MSG="connecting"
+fi
+/usr/bin/osascript -e "display notification \"$TUNNEL tunnel $MSG\" with title \"WireGuard\""
+# Refresh the SketchyBar VPN indicator once the state settles.
+(sleep 2; /opt/homebrew/bin/sketchybar --trigger vpn_change) &

@@ -1,0 +1,4 @@
+#!/bin/zsh
+# Triggered by Karabiner (Hyper + E): go to workspace E and start EASy68K if it isn't running.
+/opt/homebrew/bin/aerospace workspace E
+/usr/bin/pgrep -qf 'EDIT68K.exe' || /usr/bin/open -a /Applications/EASy68K.app

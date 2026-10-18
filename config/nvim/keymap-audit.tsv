@@ -1,0 +1,1626 @@
+Source	Mode	Keys	Description
+buffer 10 (c)	n	[A	Prev Parameter End
+buffer 10 (c)	n	[C	Prev Class End
+buffer 10 (c)	n	[F	Prev Function End
+buffer 10 (c)	n	[a	Prev Parameter Start
+buffer 10 (c)	n	[c	Prev Class Start
+buffer 10 (c)	n	[f	Prev Function Start
+buffer 10 (c)	n	]A	Next Parameter End
+buffer 10 (c)	n	]C	Next Class End
+buffer 10 (c)	n	]F	Next Function End
+buffer 10 (c)	n	]a	Next Parameter Start
+buffer 10 (c)	n	]c	Next Class Start
+buffer 10 (c)	n	]f	Next Function Start
+buffer 10 (c)	o	[A	Prev Parameter End
+buffer 10 (c)	o	[C	Prev Class End
+buffer 10 (c)	o	[F	Prev Function End
+buffer 10 (c)	o	[a	Prev Parameter Start
+buffer 10 (c)	o	[c	Prev Class Start
+buffer 10 (c)	o	[f	Prev Function Start
+buffer 10 (c)	o	]A	Next Parameter End
+buffer 10 (c)	o	]C	Next Class End
+buffer 10 (c)	o	]F	Next Function End
+buffer 10 (c)	o	]a	Next Parameter Start
+buffer 10 (c)	o	]c	Next Class Start
+buffer 10 (c)	o	]f	Next Function Start
+buffer 10 (c)	v	[A	Prev Parameter End
+buffer 10 (c)	v	[C	Prev Class End
+buffer 10 (c)	v	[F	Prev Function End
+buffer 10 (c)	v	[a	Prev Parameter Start
+buffer 10 (c)	v	[c	Prev Class Start
+buffer 10 (c)	v	[f	Prev Function Start
+buffer 10 (c)	v	]A	Next Parameter End
+buffer 10 (c)	v	]C	Next Class End
+buffer 10 (c)	v	]F	Next Function End
+buffer 10 (c)	v	]a	Next Parameter Start
+buffer 10 (c)	v	]c	Next Class Start
+buffer 10 (c)	v	]f	Next Function Start
+buffer 10 (c)	x	[A	Prev Parameter End
+buffer 10 (c)	x	[C	Prev Class End
+buffer 10 (c)	x	[F	Prev Function End
+buffer 10 (c)	x	[a	Prev Parameter Start
+buffer 10 (c)	x	[c	Prev Class Start
+buffer 10 (c)	x	[f	Prev Function Start
+buffer 10 (c)	x	]A	Next Parameter End
+buffer 10 (c)	x	]C	Next Class End
+buffer 10 (c)	x	]F	Next Function End
+buffer 10 (c)	x	]a	Next Parameter Start
+buffer 10 (c)	x	]c	Next Class Start
+buffer 10 (c)	x	]f	Next Function Start
+buffer 11 (cpp)	n	[A	Prev Parameter End
+buffer 11 (cpp)	n	[C	Prev Class End
+buffer 11 (cpp)	n	[F	Prev Function End
+buffer 11 (cpp)	n	[a	Prev Parameter Start
+buffer 11 (cpp)	n	[c	Prev Class Start
+buffer 11 (cpp)	n	[f	Prev Function Start
+buffer 11 (cpp)	n	]A	Next Parameter End
+buffer 11 (cpp)	n	]C	Next Class End
+buffer 11 (cpp)	n	]F	Next Function End
+buffer 11 (cpp)	n	]a	Next Parameter Start
+buffer 11 (cpp)	n	]c	Next Class Start
+buffer 11 (cpp)	n	]f	Next Function Start
+buffer 11 (cpp)	o	[A	Prev Parameter End
+buffer 11 (cpp)	o	[C	Prev Class End
+buffer 11 (cpp)	o	[F	Prev Function End
+buffer 11 (cpp)	o	[a	Prev Parameter Start
+buffer 11 (cpp)	o	[c	Prev Class Start
+buffer 11 (cpp)	o	[f	Prev Function Start
+buffer 11 (cpp)	o	]A	Next Parameter End
+buffer 11 (cpp)	o	]C	Next Class End
+buffer 11 (cpp)	o	]F	Next Function End
+buffer 11 (cpp)	o	]a	Next Parameter Start
+buffer 11 (cpp)	o	]c	Next Class Start
+buffer 11 (cpp)	o	]f	Next Function Start
+buffer 11 (cpp)	v	[A	Prev Parameter End
+buffer 11 (cpp)	v	[C	Prev Class End
+buffer 11 (cpp)	v	[F	Prev Function End
+buffer 11 (cpp)	v	[a	Prev Parameter Start
+buffer 11 (cpp)	v	[c	Prev Class Start
+buffer 11 (cpp)	v	[f	Prev Function Start
+buffer 11 (cpp)	v	]A	Next Parameter End
+buffer 11 (cpp)	v	]C	Next Class End
+buffer 11 (cpp)	v	]F	Next Function End
+buffer 11 (cpp)	v	]a	Next Parameter Start
+buffer 11 (cpp)	v	]c	Next Class Start
+buffer 11 (cpp)	v	]f	Next Function Start
+buffer 11 (cpp)	x	[A	Prev Parameter End
+buffer 11 (cpp)	x	[C	Prev Class End
+buffer 11 (cpp)	x	[F	Prev Function End
+buffer 11 (cpp)	x	[a	Prev Parameter Start
+buffer 11 (cpp)	x	[c	Prev Class Start
+buffer 11 (cpp)	x	[f	Prev Function Start
+buffer 11 (cpp)	x	]A	Next Parameter End
+buffer 11 (cpp)	x	]C	Next Class End
+buffer 11 (cpp)	x	]F	Next Function End
+buffer 11 (cpp)	x	]a	Next Parameter Start
+buffer 11 (cpp)	x	]c	Next Class Start
+buffer 11 (cpp)	x	]f	Next Function Start
+buffer 12 (arduino)	n	[A	Prev Parameter End
+buffer 12 (arduino)	n	[C	Prev Class End
+buffer 12 (arduino)	n	[F	Prev Function End
+buffer 12 (arduino)	n	[a	Prev Parameter Start
+buffer 12 (arduino)	n	[c	Prev Class Start
+buffer 12 (arduino)	n	[f	Prev Function Start
+buffer 12 (arduino)	n	]A	Next Parameter End
+buffer 12 (arduino)	n	]C	Next Class End
+buffer 12 (arduino)	n	]F	Next Function End
+buffer 12 (arduino)	n	]a	Next Parameter Start
+buffer 12 (arduino)	n	]c	Next Class Start
+buffer 12 (arduino)	n	]f	Next Function Start
+buffer 12 (arduino)	o	[A	Prev Parameter End
+buffer 12 (arduino)	o	[C	Prev Class End
+buffer 12 (arduino)	o	[F	Prev Function End
+buffer 12 (arduino)	o	[a	Prev Parameter Start
+buffer 12 (arduino)	o	[c	Prev Class Start
+buffer 12 (arduino)	o	[f	Prev Function Start
+buffer 12 (arduino)	o	]A	Next Parameter End
+buffer 12 (arduino)	o	]C	Next Class End
+buffer 12 (arduino)	o	]F	Next Function End
+buffer 12 (arduino)	o	]a	Next Parameter Start
+buffer 12 (arduino)	o	]c	Next Class Start
+buffer 12 (arduino)	o	]f	Next Function Start
+buffer 12 (arduino)	v	[A	Prev Parameter End
+buffer 12 (arduino)	v	[C	Prev Class End
+buffer 12 (arduino)	v	[F	Prev Function End
+buffer 12 (arduino)	v	[a	Prev Parameter Start
+buffer 12 (arduino)	v	[c	Prev Class Start
+buffer 12 (arduino)	v	[f	Prev Function Start
+buffer 12 (arduino)	v	]A	Next Parameter End
+buffer 12 (arduino)	v	]C	Next Class End
+buffer 12 (arduino)	v	]F	Next Function End
+buffer 12 (arduino)	v	]a	Next Parameter Start
+buffer 12 (arduino)	v	]c	Next Class Start
+buffer 12 (arduino)	v	]f	Next Function Start
+buffer 12 (arduino)	x	[A	Prev Parameter End
+buffer 12 (arduino)	x	[C	Prev Class End
+buffer 12 (arduino)	x	[F	Prev Function End
+buffer 12 (arduino)	x	[a	Prev Parameter Start
+buffer 12 (arduino)	x	[c	Prev Class Start
+buffer 12 (arduino)	x	[f	Prev Function Start
+buffer 12 (arduino)	x	]A	Next Parameter End
+buffer 12 (arduino)	x	]C	Next Class End
+buffer 12 (arduino)	x	]F	Next Function End
+buffer 12 (arduino)	x	]a	Next Parameter Start
+buffer 12 (arduino)	x	]c	Next Class Start
+buffer 12 (arduino)	x	]f	Next Function Start
+buffer 13 (systemverilog)	n	<Space>cA	Source Action
+buffer 13 (systemverilog)	n	<Space>ca	Code Action
+buffer 13 (systemverilog)	n	<Space>cl	Lsp Info
+buffer 13 (systemverilog)	n	<Space>cr	Rename
+buffer 13 (systemverilog)	n	<Space>sS	LSP Workspace Symbols
+buffer 13 (systemverilog)	n	<Space>ss	LSP Symbols
+buffer 13 (systemverilog)	n	K	Hover
+buffer 13 (systemverilog)	n	[A	Prev Parameter End
+buffer 13 (systemverilog)	n	[C	Prev Class End
+buffer 13 (systemverilog)	n	[F	Prev Function End
+buffer 13 (systemverilog)	n	[a	Prev Parameter Start
+buffer 13 (systemverilog)	n	[c	Prev Class Start
+buffer 13 (systemverilog)	n	[f	Prev Function Start
+buffer 13 (systemverilog)	n	]A	Next Parameter End
+buffer 13 (systemverilog)	n	]C	Next Class End
+buffer 13 (systemverilog)	n	]F	Next Function End
+buffer 13 (systemverilog)	n	]a	Next Parameter Start
+buffer 13 (systemverilog)	n	]c	Next Class Start
+buffer 13 (systemverilog)	n	]f	Next Function Start
+buffer 13 (systemverilog)	n	gD	Goto Declaration
+buffer 13 (systemverilog)	n	gI	Goto Implementation
+buffer 13 (systemverilog)	n	gd	Goto Definition
+buffer 13 (systemverilog)	n	gr	References
+buffer 13 (systemverilog)	n	gy	Goto T[y]pe Definition
+buffer 13 (systemverilog)	o	[A	Prev Parameter End
+buffer 13 (systemverilog)	o	[C	Prev Class End
+buffer 13 (systemverilog)	o	[F	Prev Function End
+buffer 13 (systemverilog)	o	[a	Prev Parameter Start
+buffer 13 (systemverilog)	o	[c	Prev Class Start
+buffer 13 (systemverilog)	o	[f	Prev Function Start
+buffer 13 (systemverilog)	o	]A	Next Parameter End
+buffer 13 (systemverilog)	o	]C	Next Class End
+buffer 13 (systemverilog)	o	]F	Next Function End
+buffer 13 (systemverilog)	o	]a	Next Parameter Start
+buffer 13 (systemverilog)	o	]c	Next Class Start
+buffer 13 (systemverilog)	o	]f	Next Function Start
+buffer 13 (systemverilog)	v	<Space>ca	Code Action
+buffer 13 (systemverilog)	v	[A	Prev Parameter End
+buffer 13 (systemverilog)	v	[C	Prev Class End
+buffer 13 (systemverilog)	v	[F	Prev Function End
+buffer 13 (systemverilog)	v	[a	Prev Parameter Start
+buffer 13 (systemverilog)	v	[c	Prev Class Start
+buffer 13 (systemverilog)	v	[f	Prev Function Start
+buffer 13 (systemverilog)	v	]A	Next Parameter End
+buffer 13 (systemverilog)	v	]C	Next Class End
+buffer 13 (systemverilog)	v	]F	Next Function End
+buffer 13 (systemverilog)	v	]a	Next Parameter Start
+buffer 13 (systemverilog)	v	]c	Next Class Start
+buffer 13 (systemverilog)	v	]f	Next Function Start
+buffer 13 (systemverilog)	x	<Space>ca	Code Action
+buffer 13 (systemverilog)	x	[A	Prev Parameter End
+buffer 13 (systemverilog)	x	[C	Prev Class End
+buffer 13 (systemverilog)	x	[F	Prev Function End
+buffer 13 (systemverilog)	x	[a	Prev Parameter Start
+buffer 13 (systemverilog)	x	[c	Prev Class Start
+buffer 13 (systemverilog)	x	[f	Prev Function Start
+buffer 13 (systemverilog)	x	]A	Next Parameter End
+buffer 13 (systemverilog)	x	]C	Next Class End
+buffer 13 (systemverilog)	x	]F	Next Function End
+buffer 13 (systemverilog)	x	]a	Next Parameter Start
+buffer 13 (systemverilog)	x	]c	Next Class Start
+buffer 13 (systemverilog)	x	]f	Next Function Start
+buffer 14 (lua)	i	<C-K>	Signature Help
+buffer 14 (lua)	n	,r	Run Lua
+buffer 14 (lua)	n	<Space>cA	Source Action
+buffer 14 (lua)	n	<Space>cC	Refresh & Display Codelens
+buffer 14 (lua)	n	<Space>cR	Rename File
+buffer 14 (lua)	n	<Space>ca	Code Action
+buffer 14 (lua)	n	<Space>cc	Run Codelens
+buffer 14 (lua)	n	<Space>cl	Lsp Info
+buffer 14 (lua)	n	<Space>cr	Rename
+buffer 14 (lua)	n	<Space>sS	LSP Workspace Symbols
+buffer 14 (lua)	n	<Space>ss	LSP Symbols
+buffer 14 (lua)	n	K	Hover
+buffer 14 (lua)	n	[A	Prev Parameter End
+buffer 14 (lua)	n	[C	Prev Class End
+buffer 14 (lua)	n	[F	Prev Function End
+buffer 14 (lua)	n	[a	Prev Parameter Start
+buffer 14 (lua)	n	[c	Prev Class Start
+buffer 14 (lua)	n	[f	Prev Function Start
+buffer 14 (lua)	n	]A	Next Parameter End
+buffer 14 (lua)	n	]C	Next Class End
+buffer 14 (lua)	n	]F	Next Function End
+buffer 14 (lua)	n	]a	Next Parameter Start
+buffer 14 (lua)	n	]c	Next Class Start
+buffer 14 (lua)	n	]f	Next Function Start
+buffer 14 (lua)	n	gD	Goto Declaration
+buffer 14 (lua)	n	gI	Goto Implementation
+buffer 14 (lua)	n	gK	Signature Help
+buffer 14 (lua)	n	gd	Goto Definition
+buffer 14 (lua)	n	gr	References
+buffer 14 (lua)	n	gy	Goto T[y]pe Definition
+buffer 14 (lua)	o	[A	Prev Parameter End
+buffer 14 (lua)	o	[C	Prev Class End
+buffer 14 (lua)	o	[F	Prev Function End
+buffer 14 (lua)	o	[a	Prev Parameter Start
+buffer 14 (lua)	o	[c	Prev Class Start
+buffer 14 (lua)	o	[f	Prev Function Start
+buffer 14 (lua)	o	]A	Next Parameter End
+buffer 14 (lua)	o	]C	Next Class End
+buffer 14 (lua)	o	]F	Next Function End
+buffer 14 (lua)	o	]a	Next Parameter Start
+buffer 14 (lua)	o	]c	Next Class Start
+buffer 14 (lua)	o	]f	Next Function Start
+buffer 14 (lua)	v	,r	Run Lua
+buffer 14 (lua)	v	<Space>ca	Code Action
+buffer 14 (lua)	v	<Space>cc	Run Codelens
+buffer 14 (lua)	v	[A	Prev Parameter End
+buffer 14 (lua)	v	[C	Prev Class End
+buffer 14 (lua)	v	[F	Prev Function End
+buffer 14 (lua)	v	[a	Prev Parameter Start
+buffer 14 (lua)	v	[c	Prev Class Start
+buffer 14 (lua)	v	[f	Prev Function Start
+buffer 14 (lua)	v	]A	Next Parameter End
+buffer 14 (lua)	v	]C	Next Class End
+buffer 14 (lua)	v	]F	Next Function End
+buffer 14 (lua)	v	]a	Next Parameter Start
+buffer 14 (lua)	v	]c	Next Class Start
+buffer 14 (lua)	v	]f	Next Function Start
+buffer 14 (lua)	x	,r	Run Lua
+buffer 14 (lua)	x	<Space>ca	Code Action
+buffer 14 (lua)	x	<Space>cc	Run Codelens
+buffer 14 (lua)	x	[A	Prev Parameter End
+buffer 14 (lua)	x	[C	Prev Class End
+buffer 14 (lua)	x	[F	Prev Function End
+buffer 14 (lua)	x	[a	Prev Parameter Start
+buffer 14 (lua)	x	[c	Prev Class Start
+buffer 14 (lua)	x	[f	Prev Function Start
+buffer 14 (lua)	x	]A	Next Parameter End
+buffer 14 (lua)	x	]C	Next Class End
+buffer 14 (lua)	x	]F	Next Function End
+buffer 14 (lua)	x	]a	Next Parameter Start
+buffer 14 (lua)	x	]c	Next Class Start
+buffer 14 (lua)	x	]f	Next Function Start
+buffer 15 (markdown)	n	"	which-key-trigger registers
+buffer 15 (markdown)	n	'	which-key-trigger marks
+buffer 15 (markdown)	n	<C-W>	which-key-trigger
+buffer 15 (markdown)	n	<Space>	which-key-trigger
+buffer 15 (markdown)	n	<Space>w	which-key-trigger
+buffer 15 (markdown)	n	[	which-key-trigger
+buffer 15 (markdown)	n	[A	Prev Parameter End
+buffer 15 (markdown)	n	[C	Prev Class End
+buffer 15 (markdown)	n	[F	Prev Function End
+buffer 15 (markdown)	n	[[	Jump to previous section
+buffer 15 (markdown)	n	[a	Prev Parameter Start
+buffer 15 (markdown)	n	[c	Prev Class Start
+buffer 15 (markdown)	n	[f	Prev Function Start
+buffer 15 (markdown)	n	]	which-key-trigger
+buffer 15 (markdown)	n	]A	Next Parameter End
+buffer 15 (markdown)	n	]C	Next Class End
+buffer 15 (markdown)	n	]F	Next Function End
+buffer 15 (markdown)	n	]]	Jump to next section
+buffer 15 (markdown)	n	]a	Next Parameter Start
+buffer 15 (markdown)	n	]c	Next Class Start
+buffer 15 (markdown)	n	]f	Next Function Start
+buffer 15 (markdown)	n	`	which-key-trigger marks
+buffer 15 (markdown)	n	g	which-key-trigger
+buffer 15 (markdown)	n	g'	which-key-trigger marks
+buffer 15 (markdown)	n	gO	Show an Outline of the current buffer
+buffer 15 (markdown)	n	g`	which-key-trigger marks
+buffer 15 (markdown)	n	z	which-key-trigger
+buffer 15 (markdown)	n	z=	which-key-trigger spelling
+buffer 15 (markdown)	o	[A	Prev Parameter End
+buffer 15 (markdown)	o	[C	Prev Class End
+buffer 15 (markdown)	o	[F	Prev Function End
+buffer 15 (markdown)	o	[a	Prev Parameter Start
+buffer 15 (markdown)	o	[c	Prev Class Start
+buffer 15 (markdown)	o	[f	Prev Function Start
+buffer 15 (markdown)	o	]A	Next Parameter End
+buffer 15 (markdown)	o	]C	Next Class End
+buffer 15 (markdown)	o	]F	Next Function End
+buffer 15 (markdown)	o	]a	Next Parameter Start
+buffer 15 (markdown)	o	]c	Next Class Start
+buffer 15 (markdown)	o	]f	Next Function Start
+buffer 15 (markdown)	v	[A	Prev Parameter End
+buffer 15 (markdown)	v	[C	Prev Class End
+buffer 15 (markdown)	v	[F	Prev Function End
+buffer 15 (markdown)	v	[[	
+buffer 15 (markdown)	v	[a	Prev Parameter Start
+buffer 15 (markdown)	v	[c	Prev Class Start
+buffer 15 (markdown)	v	[f	Prev Function Start
+buffer 15 (markdown)	v	]A	Next Parameter End
+buffer 15 (markdown)	v	]C	Next Class End
+buffer 15 (markdown)	v	]F	Next Function End
+buffer 15 (markdown)	v	]]	
+buffer 15 (markdown)	v	]a	Next Parameter Start
+buffer 15 (markdown)	v	]c	Next Class Start
+buffer 15 (markdown)	v	]f	Next Function Start
+buffer 15 (markdown)	x	[A	Prev Parameter End
+buffer 15 (markdown)	x	[C	Prev Class End
+buffer 15 (markdown)	x	[F	Prev Function End
+buffer 15 (markdown)	x	[[	
+buffer 15 (markdown)	x	[a	Prev Parameter Start
+buffer 15 (markdown)	x	[c	Prev Class Start
+buffer 15 (markdown)	x	[f	Prev Function Start
+buffer 15 (markdown)	x	]A	Next Parameter End
+buffer 15 (markdown)	x	]C	Next Class End
+buffer 15 (markdown)	x	]F	Next Function End
+buffer 15 (markdown)	x	]]	
+buffer 15 (markdown)	x	]a	Next Parameter Start
+buffer 15 (markdown)	x	]c	Next Class Start
+buffer 15 (markdown)	x	]f	Next Function Start
+buffer 17 (snacks_notif)	n	q	
+buffer 2 (mcu_debug)	n	?	All debug views
+buffer 2 (mcu_debug)	n	r	Refresh halted target
+buffer 3 (mcu_debug)	n	?	All debug views
+buffer 3 (mcu_debug)	n	C	Clear register history
+buffer 3 (mcu_debug)	n	r	Refresh halted target
+buffer 3 (mcu_debug)	n	s	Save history to file
+buffer 4 (mcu_debug)	n	?	All debug views
+buffer 4 (mcu_debug)	n	a	Change memory address
+buffer 4 (mcu_debug)	n	r	Refresh halted target
+buffer 5 (mcu_debug)	n	?	All debug views
+buffer 5 (mcu_debug)	n	a	Add peripheral expression
+buffer 5 (mcu_debug)	n	dd	Remove peripheral watch
+buffer 5 (mcu_debug)	n	r	Refresh halted target
+buffer 6 (mcu_debug)	n	?	All debug views
+buffer 6 (mcu_debug)	n	r	Refresh halted target
+buffer 7 (tex)	i	#-	
+buffer 7 (tex)	i	#/	
+buffer 7 (tex)	i	#B	
+buffer 7 (tex)	i	#b	
+buffer 7 (tex)	i	#c	
+buffer 7 (tex)	i	#f	
+buffer 7 (tex)	i	<F7>	
+buffer 7 (tex)	i	<Plug>(vimtex-cmd-create)	
+buffer 7 (tex)	i	<Plug>(vimtex-delim-close)	
+buffer 7 (tex)	i	]]	
+buffer 7 (tex)	i	`(	
+buffer 7 (tex)	i	`)	
+buffer 7 (tex)	i	`*	
+buffer 7 (tex)	i	`+	
+buffer 7 (tex)	i	`.	
+buffer 7 (tex)	i	`0	
+buffer 7 (tex)	i	`2	
+buffer 7 (tex)	i	`6	
+buffer 7 (tex)	i	`8	
+buffer 7 (tex)	i	`<lt>	
+buffer 7 (tex)	i	`=	
+buffer 7 (tex)	i	`>	
+buffer 7 (tex)	i	`A	
+buffer 7 (tex)	i	`B	
+buffer 7 (tex)	i	`D	
+buffer 7 (tex)	i	`E	
+buffer 7 (tex)	i	`F	
+buffer 7 (tex)	i	`G	
+buffer 7 (tex)	i	`H	
+buffer 7 (tex)	i	`L	
+buffer 7 (tex)	i	`N	
+buffer 7 (tex)	i	`P	
+buffer 7 (tex)	i	`Q	
+buffer 7 (tex)	i	`S	
+buffer 7 (tex)	i	`U	
+buffer 7 (tex)	i	`W	
+buffer 7 (tex)	i	`X	
+buffer 7 (tex)	i	`Y	
+buffer 7 (tex)	i	`[	
+buffer 7 (tex)	i	`\	
+buffer 7 (tex)	i	`]	
+buffer 7 (tex)	i	``	
+buffer 7 (tex)	i	`a	
+buffer 7 (tex)	i	`b	
+buffer 7 (tex)	i	`c	
+buffer 7 (tex)	i	`d	
+buffer 7 (tex)	i	`e	
+buffer 7 (tex)	i	`f	
+buffer 7 (tex)	i	`g	
+buffer 7 (tex)	i	`h	
+buffer 7 (tex)	i	`i	
+buffer 7 (tex)	i	`jH	
+buffer 7 (tex)	i	`jJ	
+buffer 7 (tex)	i	`jK	
+buffer 7 (tex)	i	`jL	
+buffer 7 (tex)	i	`jh	
+buffer 7 (tex)	i	`jj	
+buffer 7 (tex)	i	`jk	
+buffer 7 (tex)	i	`jl	
+buffer 7 (tex)	i	`k	
+buffer 7 (tex)	i	`l	
+buffer 7 (tex)	i	`m	
+buffer 7 (tex)	i	`n	
+buffer 7 (tex)	i	`p	
+buffer 7 (tex)	i	`q	
+buffer 7 (tex)	i	`r	
+buffer 7 (tex)	i	`s	
+buffer 7 (tex)	i	`t	
+buffer 7 (tex)	i	`u	
+buffer 7 (tex)	i	`ve	
+buffer 7 (tex)	i	`vf	
+buffer 7 (tex)	i	`vk	
+buffer 7 (tex)	i	`vp	
+buffer 7 (tex)	i	`vq	
+buffer 7 (tex)	i	`vr	
+buffer 7 (tex)	i	`w	
+buffer 7 (tex)	i	`x	
+buffer 7 (tex)	i	`y	
+buffer 7 (tex)	i	`z	
+buffer 7 (tex)	n	%	
+buffer 7 (tex)	n	,l	+vimtex
+buffer 7 (tex)	n	,lC	
+buffer 7 (tex)	n	,lG	
+buffer 7 (tex)	n	,lI	
+buffer 7 (tex)	n	,lK	
+buffer 7 (tex)	n	,lL	
+buffer 7 (tex)	n	,lT	
+buffer 7 (tex)	n	,lX	
+buffer 7 (tex)	n	,la	
+buffer 7 (tex)	n	,lc	
+buffer 7 (tex)	n	,le	
+buffer 7 (tex)	n	,lg	
+buffer 7 (tex)	n	,li	
+buffer 7 (tex)	n	,lk	
+buffer 7 (tex)	n	,ll	
+buffer 7 (tex)	n	,lm	
+buffer 7 (tex)	n	,lo	
+buffer 7 (tex)	n	,lq	
+buffer 7 (tex)	n	,ls	
+buffer 7 (tex)	n	,lt	
+buffer 7 (tex)	n	,lv	
+buffer 7 (tex)	n	,lx	
+buffer 7 (tex)	n	<Plug>(vimtex-%)	
+buffer 7 (tex)	n	<Plug>(vimtex-[*)	
+buffer 7 (tex)	n	<Plug>(vimtex-[/)	
+buffer 7 (tex)	n	<Plug>(vimtex-[M)	
+buffer 7 (tex)	n	<Plug>(vimtex-[N)	
+buffer 7 (tex)	n	<Plug>(vimtex-[R)	
+buffer 7 (tex)	n	<Plug>(vimtex-[[)	
+buffer 7 (tex)	n	<Plug>(vimtex-[])	
+buffer 7 (tex)	n	<Plug>(vimtex-[m)	
+buffer 7 (tex)	n	<Plug>(vimtex-[n)	
+buffer 7 (tex)	n	<Plug>(vimtex-[r)	
+buffer 7 (tex)	n	<Plug>(vimtex-]*)	
+buffer 7 (tex)	n	<Plug>(vimtex-]/)	
+buffer 7 (tex)	n	<Plug>(vimtex-]M)	
+buffer 7 (tex)	n	<Plug>(vimtex-]N)	
+buffer 7 (tex)	n	<Plug>(vimtex-]R)	
+buffer 7 (tex)	n	<Plug>(vimtex-][)	
+buffer 7 (tex)	n	<Plug>(vimtex-]])	
+buffer 7 (tex)	n	<Plug>(vimtex-]m)	
+buffer 7 (tex)	n	<Plug>(vimtex-]n)	
+buffer 7 (tex)	n	<Plug>(vimtex-]r)	
+buffer 7 (tex)	n	<Plug>(vimtex-clean)	
+buffer 7 (tex)	n	<Plug>(vimtex-clean-full)	
+buffer 7 (tex)	n	<Plug>(vimtex-cmd-change)	
+buffer 7 (tex)	n	<Plug>(vimtex-cmd-create)	
+buffer 7 (tex)	n	<Plug>(vimtex-cmd-delete)	
+buffer 7 (tex)	n	<Plug>(vimtex-cmd-toggle-frac)	
+buffer 7 (tex)	n	<Plug>(vimtex-cmd-toggle-star)	
+buffer 7 (tex)	n	<Plug>(vimtex-compile)	
+buffer 7 (tex)	n	<Plug>(vimtex-compile-output)	
+buffer 7 (tex)	n	<Plug>(vimtex-compile-selected)	
+buffer 7 (tex)	n	<Plug>(vimtex-compile-ss)	
+buffer 7 (tex)	n	<Plug>(vimtex-context-menu)	
+buffer 7 (tex)	n	<Plug>(vimtex-delim-add-modifiers)	
+buffer 7 (tex)	n	<Plug>(vimtex-delim-change-math)	
+buffer 7 (tex)	n	<Plug>(vimtex-delim-delete)	
+buffer 7 (tex)	n	<Plug>(vimtex-delim-toggle-modifier)	
+buffer 7 (tex)	n	<Plug>(vimtex-delim-toggle-modifier-reverse)	
+buffer 7 (tex)	n	<Plug>(vimtex-doc-package)	
+buffer 7 (tex)	n	<Plug>(vimtex-env-change)	
+buffer 7 (tex)	n	<Plug>(vimtex-env-change-math)	
+buffer 7 (tex)	n	<Plug>(vimtex-env-delete)	
+buffer 7 (tex)	n	<Plug>(vimtex-env-delete-math)	
+buffer 7 (tex)	n	<Plug>(vimtex-env-surround-line)	
+buffer 7 (tex)	n	<Plug>(vimtex-env-surround-operator)	
+buffer 7 (tex)	n	<Plug>(vimtex-env-toggle-math)	
+buffer 7 (tex)	n	<Plug>(vimtex-env-toggle-star)	
+buffer 7 (tex)	n	<Plug>(vimtex-errors)	
+buffer 7 (tex)	n	<Plug>(vimtex-imaps-list)	
+buffer 7 (tex)	n	<Plug>(vimtex-info)	
+buffer 7 (tex)	n	<Plug>(vimtex-info-full)	
+buffer 7 (tex)	n	<Plug>(vimtex-log)	
+buffer 7 (tex)	n	<Plug>(vimtex-reload)	
+buffer 7 (tex)	n	<Plug>(vimtex-reload-state)	
+buffer 7 (tex)	n	<Plug>(vimtex-status)	
+buffer 7 (tex)	n	<Plug>(vimtex-status-all)	
+buffer 7 (tex)	n	<Plug>(vimtex-stop)	
+buffer 7 (tex)	n	<Plug>(vimtex-stop-all)	
+buffer 7 (tex)	n	<Plug>(vimtex-toc-open)	
+buffer 7 (tex)	n	<Plug>(vimtex-toc-toggle)	
+buffer 7 (tex)	n	<Plug>(vimtex-toggle-main)	
+buffer 7 (tex)	n	<Plug>(vimtex-view)	
+buffer 7 (tex)	n	<SNR>85_(V)	
+buffer 7 (tex)	n	<SNR>85_(v)	
+buffer 7 (tex)	n	<Space>K	Vimtex Docs
+buffer 7 (tex)	n	<Space>cl	Lsp Info
+buffer 7 (tex)	n	<Space>cr	Rename
+buffer 7 (tex)	n	<Space>jB	Rebuild PDF
+buffer 7 (tex)	n	<Space>ja	Toggle build on save
+buffer 7 (tex)	n	<Space>jb	Save and build PDF
+buffer 7 (tex)	n	<Space>jc	Correct word (first suggestion)
+buffer 7 (tex)	n	<Space>je	Build errors
+buffer 7 (tex)	n	<Space>jf	Insert fraction
+buffer 7 (tex)	n	<Space>ji	LaTeX project info
+buffer 7 (tex)	n	<Space>jj	Next visual line
+buffer 7 (tex)	n	<Space>jk	Previous visual line
+buffer 7 (tex)	n	<Space>jm	Insert display math
+buffer 7 (tex)	n	<Space>jo	Compiler output
+buffer 7 (tex)	n	<Space>js	Spelling suggestions
+buffer 7 (tex)	n	<Space>jt	Table of contents
+buffer 7 (tex)	n	<Space>jv	Preview PDF / jump to cursor
+buffer 7 (tex)	n	<Space>jw	Add word to dictionary
+buffer 7 (tex)	n	<Space>sS	LSP Workspace Symbols
+buffer 7 (tex)	n	<Space>ss	LSP Symbols
+buffer 7 (tex)	n	K	Hover
+buffer 7 (tex)	n	[*	
+buffer 7 (tex)	n	[/	
+buffer 7 (tex)	n	[A	Prev Parameter End
+buffer 7 (tex)	n	[C	Prev Class End
+buffer 7 (tex)	n	[F	Prev Function End
+buffer 7 (tex)	n	[M	
+buffer 7 (tex)	n	[N	
+buffer 7 (tex)	n	[R	
+buffer 7 (tex)	n	[[	
+buffer 7 (tex)	n	[]	
+buffer 7 (tex)	n	[a	Prev Parameter Start
+buffer 7 (tex)	n	[c	Prev Class Start
+buffer 7 (tex)	n	[f	Prev Function Start
+buffer 7 (tex)	n	[m	
+buffer 7 (tex)	n	[n	
+buffer 7 (tex)	n	[r	
+buffer 7 (tex)	n	]*	
+buffer 7 (tex)	n	]/	
+buffer 7 (tex)	n	]A	Next Parameter End
+buffer 7 (tex)	n	]C	Next Class End
+buffer 7 (tex)	n	]F	Next Function End
+buffer 7 (tex)	n	]M	
+buffer 7 (tex)	n	]N	
+buffer 7 (tex)	n	]R	
+buffer 7 (tex)	n	][	
+buffer 7 (tex)	n	]]	
+buffer 7 (tex)	n	]a	Next Parameter Start
+buffer 7 (tex)	n	]c	Next Class Start
+buffer 7 (tex)	n	]f	Next Function Start
+buffer 7 (tex)	n	]m	
+buffer 7 (tex)	n	]n	
+buffer 7 (tex)	n	]r	
+buffer 7 (tex)	n	cs$	
+buffer 7 (tex)	n	csc	
+buffer 7 (tex)	n	csd	
+buffer 7 (tex)	n	cse	
+buffer 7 (tex)	n	ds$	
+buffer 7 (tex)	n	dsc	
+buffer 7 (tex)	n	dsd	
+buffer 7 (tex)	n	dse	
+buffer 7 (tex)	n	gD	Goto Declaration
+buffer 7 (tex)	n	gI	Goto Implementation
+buffer 7 (tex)	n	gd	Goto Definition
+buffer 7 (tex)	n	gr	References
+buffer 7 (tex)	n	gy	Goto T[y]pe Definition
+buffer 7 (tex)	n	ts$	
+buffer 7 (tex)	n	tsD	
+buffer 7 (tex)	n	tsc	
+buffer 7 (tex)	n	tsd	
+buffer 7 (tex)	n	tse	
+buffer 7 (tex)	n	tsf	
+buffer 7 (tex)	o	%	
+buffer 7 (tex)	o	<Plug>(vimtex-%)	
+buffer 7 (tex)	o	<Plug>(vimtex-[*)	
+buffer 7 (tex)	o	<Plug>(vimtex-[/)	
+buffer 7 (tex)	o	<Plug>(vimtex-[M)	
+buffer 7 (tex)	o	<Plug>(vimtex-[N)	
+buffer 7 (tex)	o	<Plug>(vimtex-[R)	
+buffer 7 (tex)	o	<Plug>(vimtex-[[)	
+buffer 7 (tex)	o	<Plug>(vimtex-[])	
+buffer 7 (tex)	o	<Plug>(vimtex-[m)	
+buffer 7 (tex)	o	<Plug>(vimtex-[n)	
+buffer 7 (tex)	o	<Plug>(vimtex-[r)	
+buffer 7 (tex)	o	<Plug>(vimtex-]*)	
+buffer 7 (tex)	o	<Plug>(vimtex-]/)	
+buffer 7 (tex)	o	<Plug>(vimtex-]M)	
+buffer 7 (tex)	o	<Plug>(vimtex-]N)	
+buffer 7 (tex)	o	<Plug>(vimtex-]R)	
+buffer 7 (tex)	o	<Plug>(vimtex-][)	
+buffer 7 (tex)	o	<Plug>(vimtex-]])	
+buffer 7 (tex)	o	<Plug>(vimtex-]m)	
+buffer 7 (tex)	o	<Plug>(vimtex-]n)	
+buffer 7 (tex)	o	<Plug>(vimtex-]r)	
+buffer 7 (tex)	o	<Plug>(vimtex-a$)	
+buffer 7 (tex)	o	<Plug>(vimtex-aP)	
+buffer 7 (tex)	o	<Plug>(vimtex-ac)	
+buffer 7 (tex)	o	<Plug>(vimtex-ad)	
+buffer 7 (tex)	o	<Plug>(vimtex-ae)	
+buffer 7 (tex)	o	<Plug>(vimtex-am)	
+buffer 7 (tex)	o	<Plug>(vimtex-i$)	
+buffer 7 (tex)	o	<Plug>(vimtex-iP)	
+buffer 7 (tex)	o	<Plug>(vimtex-ic)	
+buffer 7 (tex)	o	<Plug>(vimtex-id)	
+buffer 7 (tex)	o	<Plug>(vimtex-ie)	
+buffer 7 (tex)	o	<Plug>(vimtex-im)	
+buffer 7 (tex)	o	[*	
+buffer 7 (tex)	o	[/	
+buffer 7 (tex)	o	[A	Prev Parameter End
+buffer 7 (tex)	o	[C	Prev Class End
+buffer 7 (tex)	o	[F	Prev Function End
+buffer 7 (tex)	o	[M	
+buffer 7 (tex)	o	[N	
+buffer 7 (tex)	o	[R	
+buffer 7 (tex)	o	[[	
+buffer 7 (tex)	o	[]	
+buffer 7 (tex)	o	[a	Prev Parameter Start
+buffer 7 (tex)	o	[c	Prev Class Start
+buffer 7 (tex)	o	[f	Prev Function Start
+buffer 7 (tex)	o	[m	
+buffer 7 (tex)	o	[n	
+buffer 7 (tex)	o	[r	
+buffer 7 (tex)	o	]*	
+buffer 7 (tex)	o	]/	
+buffer 7 (tex)	o	]A	Next Parameter End
+buffer 7 (tex)	o	]C	Next Class End
+buffer 7 (tex)	o	]F	Next Function End
+buffer 7 (tex)	o	]M	
+buffer 7 (tex)	o	]N	
+buffer 7 (tex)	o	]R	
+buffer 7 (tex)	o	][	
+buffer 7 (tex)	o	]]	
+buffer 7 (tex)	o	]a	Next Parameter Start
+buffer 7 (tex)	o	]c	Next Class Start
+buffer 7 (tex)	o	]f	Next Function Start
+buffer 7 (tex)	o	]m	
+buffer 7 (tex)	o	]n	
+buffer 7 (tex)	o	]r	
+buffer 7 (tex)	o	a$	
+buffer 7 (tex)	o	aP	
+buffer 7 (tex)	o	ac	
+buffer 7 (tex)	o	ad	
+buffer 7 (tex)	o	ae	
+buffer 7 (tex)	o	am	
+buffer 7 (tex)	o	i$	
+buffer 7 (tex)	o	iP	
+buffer 7 (tex)	o	ic	
+buffer 7 (tex)	o	id	
+buffer 7 (tex)	o	ie	
+buffer 7 (tex)	o	im	
+buffer 7 (tex)	v	%	
+buffer 7 (tex)	v	,lL	
+buffer 7 (tex)	v	<F6>	
+buffer 7 (tex)	v	<F7>	
+buffer 7 (tex)	v	<Plug>(vimtex-%)	
+buffer 7 (tex)	v	<Plug>(vimtex-[*)	
+buffer 7 (tex)	v	<Plug>(vimtex-[/)	
+buffer 7 (tex)	v	<Plug>(vimtex-[M)	
+buffer 7 (tex)	v	<Plug>(vimtex-[N)	
+buffer 7 (tex)	v	<Plug>(vimtex-[R)	
+buffer 7 (tex)	v	<Plug>(vimtex-[[)	
+buffer 7 (tex)	v	<Plug>(vimtex-[])	
+buffer 7 (tex)	v	<Plug>(vimtex-[m)	
+buffer 7 (tex)	v	<Plug>(vimtex-[n)	
+buffer 7 (tex)	v	<Plug>(vimtex-[r)	
+buffer 7 (tex)	v	<Plug>(vimtex-]*)	
+buffer 7 (tex)	v	<Plug>(vimtex-]/)	
+buffer 7 (tex)	v	<Plug>(vimtex-]M)	
+buffer 7 (tex)	v	<Plug>(vimtex-]N)	
+buffer 7 (tex)	v	<Plug>(vimtex-]R)	
+buffer 7 (tex)	v	<Plug>(vimtex-][)	
+buffer 7 (tex)	v	<Plug>(vimtex-]])	
+buffer 7 (tex)	v	<Plug>(vimtex-]m)	
+buffer 7 (tex)	v	<Plug>(vimtex-]n)	
+buffer 7 (tex)	v	<Plug>(vimtex-]r)	
+buffer 7 (tex)	v	<Plug>(vimtex-a$)	
+buffer 7 (tex)	v	<Plug>(vimtex-aP)	
+buffer 7 (tex)	v	<Plug>(vimtex-ac)	
+buffer 7 (tex)	v	<Plug>(vimtex-ad)	
+buffer 7 (tex)	v	<Plug>(vimtex-ae)	
+buffer 7 (tex)	v	<Plug>(vimtex-am)	
+buffer 7 (tex)	v	<Plug>(vimtex-cmd-create)	
+buffer 7 (tex)	v	<Plug>(vimtex-cmd-toggle-frac)	
+buffer 7 (tex)	v	<Plug>(vimtex-compile-selected)	
+buffer 7 (tex)	v	<Plug>(vimtex-delim-toggle-modifier)	
+buffer 7 (tex)	v	<Plug>(vimtex-delim-toggle-modifier-reverse)	
+buffer 7 (tex)	v	<Plug>(vimtex-env-surround-visual)	
+buffer 7 (tex)	v	<Plug>(vimtex-i$)	
+buffer 7 (tex)	v	<Plug>(vimtex-iP)	
+buffer 7 (tex)	v	<Plug>(vimtex-ic)	
+buffer 7 (tex)	v	<Plug>(vimtex-id)	
+buffer 7 (tex)	v	<Plug>(vimtex-ie)	
+buffer 7 (tex)	v	<Plug>(vimtex-im)	
+buffer 7 (tex)	v	<SNR>85_(vimtex-%)	
+buffer 7 (tex)	v	<SNR>85_(vimtex-[*)	
+buffer 7 (tex)	v	<SNR>85_(vimtex-[/)	
+buffer 7 (tex)	v	<SNR>85_(vimtex-[M)	
+buffer 7 (tex)	v	<SNR>85_(vimtex-[N)	
+buffer 7 (tex)	v	<SNR>85_(vimtex-[R)	
+buffer 7 (tex)	v	<SNR>85_(vimtex-[[)	
+buffer 7 (tex)	v	<SNR>85_(vimtex-[])	
+buffer 7 (tex)	v	<SNR>85_(vimtex-[m)	
+buffer 7 (tex)	v	<SNR>85_(vimtex-[n)	
+buffer 7 (tex)	v	<SNR>85_(vimtex-[r)	
+buffer 7 (tex)	v	<SNR>85_(vimtex-]*)	
+buffer 7 (tex)	v	<SNR>85_(vimtex-]/)	
+buffer 7 (tex)	v	<SNR>85_(vimtex-]M)	
+buffer 7 (tex)	v	<SNR>85_(vimtex-]N)	
+buffer 7 (tex)	v	<SNR>85_(vimtex-]R)	
+buffer 7 (tex)	v	<SNR>85_(vimtex-][)	
+buffer 7 (tex)	v	<SNR>85_(vimtex-]])	
+buffer 7 (tex)	v	<SNR>85_(vimtex-]m)	
+buffer 7 (tex)	v	<SNR>85_(vimtex-]n)	
+buffer 7 (tex)	v	<SNR>85_(vimtex-]r)	
+buffer 7 (tex)	v	[*	
+buffer 7 (tex)	v	[/	
+buffer 7 (tex)	v	[A	Prev Parameter End
+buffer 7 (tex)	v	[C	Prev Class End
+buffer 7 (tex)	v	[F	Prev Function End
+buffer 7 (tex)	v	[M	
+buffer 7 (tex)	v	[N	
+buffer 7 (tex)	v	[R	
+buffer 7 (tex)	v	[[	
+buffer 7 (tex)	v	[]	
+buffer 7 (tex)	v	[a	Prev Parameter Start
+buffer 7 (tex)	v	[c	Prev Class Start
+buffer 7 (tex)	v	[f	Prev Function Start
+buffer 7 (tex)	v	[m	
+buffer 7 (tex)	v	[r	
+buffer 7 (tex)	v	]*	
+buffer 7 (tex)	v	]/	
+buffer 7 (tex)	v	]A	Next Parameter End
+buffer 7 (tex)	v	]C	Next Class End
+buffer 7 (tex)	v	]F	Next Function End
+buffer 7 (tex)	v	]M	
+buffer 7 (tex)	v	]N	
+buffer 7 (tex)	v	]R	
+buffer 7 (tex)	v	][	
+buffer 7 (tex)	v	]]	
+buffer 7 (tex)	v	]a	Next Parameter Start
+buffer 7 (tex)	v	]c	Next Class Start
+buffer 7 (tex)	v	]f	Next Function Start
+buffer 7 (tex)	v	]m	
+buffer 7 (tex)	v	]r	
+buffer 7 (tex)	v	a$	
+buffer 7 (tex)	v	aP	
+buffer 7 (tex)	v	ac	
+buffer 7 (tex)	v	ad	
+buffer 7 (tex)	v	ae	
+buffer 7 (tex)	v	am	
+buffer 7 (tex)	v	i$	
+buffer 7 (tex)	v	iP	
+buffer 7 (tex)	v	ic	
+buffer 7 (tex)	v	id	
+buffer 7 (tex)	v	ie	
+buffer 7 (tex)	v	im	
+buffer 7 (tex)	v	tsD	
+buffer 7 (tex)	v	tsd	
+buffer 7 (tex)	v	tsf	
+buffer 7 (tex)	x	%	
+buffer 7 (tex)	x	,lL	
+buffer 7 (tex)	x	<F6>	
+buffer 7 (tex)	x	<F7>	
+buffer 7 (tex)	x	<Plug>(vimtex-%)	
+buffer 7 (tex)	x	<Plug>(vimtex-[*)	
+buffer 7 (tex)	x	<Plug>(vimtex-[/)	
+buffer 7 (tex)	x	<Plug>(vimtex-[M)	
+buffer 7 (tex)	x	<Plug>(vimtex-[N)	
+buffer 7 (tex)	x	<Plug>(vimtex-[R)	
+buffer 7 (tex)	x	<Plug>(vimtex-[[)	
+buffer 7 (tex)	x	<Plug>(vimtex-[])	
+buffer 7 (tex)	x	<Plug>(vimtex-[m)	
+buffer 7 (tex)	x	<Plug>(vimtex-[n)	
+buffer 7 (tex)	x	<Plug>(vimtex-[r)	
+buffer 7 (tex)	x	<Plug>(vimtex-]*)	
+buffer 7 (tex)	x	<Plug>(vimtex-]/)	
+buffer 7 (tex)	x	<Plug>(vimtex-]M)	
+buffer 7 (tex)	x	<Plug>(vimtex-]N)	
+buffer 7 (tex)	x	<Plug>(vimtex-]R)	
+buffer 7 (tex)	x	<Plug>(vimtex-][)	
+buffer 7 (tex)	x	<Plug>(vimtex-]])	
+buffer 7 (tex)	x	<Plug>(vimtex-]m)	
+buffer 7 (tex)	x	<Plug>(vimtex-]n)	
+buffer 7 (tex)	x	<Plug>(vimtex-]r)	
+buffer 7 (tex)	x	<Plug>(vimtex-a$)	
+buffer 7 (tex)	x	<Plug>(vimtex-aP)	
+buffer 7 (tex)	x	<Plug>(vimtex-ac)	
+buffer 7 (tex)	x	<Plug>(vimtex-ad)	
+buffer 7 (tex)	x	<Plug>(vimtex-ae)	
+buffer 7 (tex)	x	<Plug>(vimtex-am)	
+buffer 7 (tex)	x	<Plug>(vimtex-cmd-create)	
+buffer 7 (tex)	x	<Plug>(vimtex-cmd-toggle-frac)	
+buffer 7 (tex)	x	<Plug>(vimtex-compile-selected)	
+buffer 7 (tex)	x	<Plug>(vimtex-delim-toggle-modifier)	
+buffer 7 (tex)	x	<Plug>(vimtex-delim-toggle-modifier-reverse)	
+buffer 7 (tex)	x	<Plug>(vimtex-env-surround-visual)	
+buffer 7 (tex)	x	<Plug>(vimtex-i$)	
+buffer 7 (tex)	x	<Plug>(vimtex-iP)	
+buffer 7 (tex)	x	<Plug>(vimtex-ic)	
+buffer 7 (tex)	x	<Plug>(vimtex-id)	
+buffer 7 (tex)	x	<Plug>(vimtex-ie)	
+buffer 7 (tex)	x	<Plug>(vimtex-im)	
+buffer 7 (tex)	x	<SNR>85_(vimtex-%)	
+buffer 7 (tex)	x	<SNR>85_(vimtex-[*)	
+buffer 7 (tex)	x	<SNR>85_(vimtex-[/)	
+buffer 7 (tex)	x	<SNR>85_(vimtex-[M)	
+buffer 7 (tex)	x	<SNR>85_(vimtex-[N)	
+buffer 7 (tex)	x	<SNR>85_(vimtex-[R)	
+buffer 7 (tex)	x	<SNR>85_(vimtex-[[)	
+buffer 7 (tex)	x	<SNR>85_(vimtex-[])	
+buffer 7 (tex)	x	<SNR>85_(vimtex-[m)	
+buffer 7 (tex)	x	<SNR>85_(vimtex-[n)	
+buffer 7 (tex)	x	<SNR>85_(vimtex-[r)	
+buffer 7 (tex)	x	<SNR>85_(vimtex-]*)	
+buffer 7 (tex)	x	<SNR>85_(vimtex-]/)	
+buffer 7 (tex)	x	<SNR>85_(vimtex-]M)	
+buffer 7 (tex)	x	<SNR>85_(vimtex-]N)	
+buffer 7 (tex)	x	<SNR>85_(vimtex-]R)	
+buffer 7 (tex)	x	<SNR>85_(vimtex-][)	
+buffer 7 (tex)	x	<SNR>85_(vimtex-]])	
+buffer 7 (tex)	x	<SNR>85_(vimtex-]m)	
+buffer 7 (tex)	x	<SNR>85_(vimtex-]n)	
+buffer 7 (tex)	x	<SNR>85_(vimtex-]r)	
+buffer 7 (tex)	x	[*	
+buffer 7 (tex)	x	[/	
+buffer 7 (tex)	x	[A	Prev Parameter End
+buffer 7 (tex)	x	[C	Prev Class End
+buffer 7 (tex)	x	[F	Prev Function End
+buffer 7 (tex)	x	[M	
+buffer 7 (tex)	x	[N	
+buffer 7 (tex)	x	[R	
+buffer 7 (tex)	x	[[	
+buffer 7 (tex)	x	[]	
+buffer 7 (tex)	x	[a	Prev Parameter Start
+buffer 7 (tex)	x	[c	Prev Class Start
+buffer 7 (tex)	x	[f	Prev Function Start
+buffer 7 (tex)	x	[m	
+buffer 7 (tex)	x	[r	
+buffer 7 (tex)	x	]*	
+buffer 7 (tex)	x	]/	
+buffer 7 (tex)	x	]A	Next Parameter End
+buffer 7 (tex)	x	]C	Next Class End
+buffer 7 (tex)	x	]F	Next Function End
+buffer 7 (tex)	x	]M	
+buffer 7 (tex)	x	]N	
+buffer 7 (tex)	x	]R	
+buffer 7 (tex)	x	][	
+buffer 7 (tex)	x	]]	
+buffer 7 (tex)	x	]a	Next Parameter Start
+buffer 7 (tex)	x	]c	Next Class Start
+buffer 7 (tex)	x	]f	Next Function Start
+buffer 7 (tex)	x	]m	
+buffer 7 (tex)	x	]r	
+buffer 7 (tex)	x	a$	
+buffer 7 (tex)	x	aP	
+buffer 7 (tex)	x	ac	
+buffer 7 (tex)	x	ad	
+buffer 7 (tex)	x	ae	
+buffer 7 (tex)	x	am	
+buffer 7 (tex)	x	i$	
+buffer 7 (tex)	x	iP	
+buffer 7 (tex)	x	ic	
+buffer 7 (tex)	x	id	
+buffer 7 (tex)	x	ie	
+buffer 7 (tex)	x	im	
+buffer 7 (tex)	x	tsD	
+buffer 7 (tex)	x	tsd	
+buffer 7 (tex)	x	tsf	
+buffer 8 (plaintex)	n	<Space>K	Vimtex Docs
+buffer 8 (plaintex)	n	<Space>cl	Lsp Info
+buffer 8 (plaintex)	n	<Space>cr	Rename
+buffer 8 (plaintex)	n	<Space>jB	Rebuild PDF
+buffer 8 (plaintex)	n	<Space>ja	Toggle build on save
+buffer 8 (plaintex)	n	<Space>jb	Save and build PDF
+buffer 8 (plaintex)	n	<Space>jc	Correct word (first suggestion)
+buffer 8 (plaintex)	n	<Space>je	Build errors
+buffer 8 (plaintex)	n	<Space>jf	Insert fraction
+buffer 8 (plaintex)	n	<Space>ji	LaTeX project info
+buffer 8 (plaintex)	n	<Space>jj	Next visual line
+buffer 8 (plaintex)	n	<Space>jk	Previous visual line
+buffer 8 (plaintex)	n	<Space>jm	Insert display math
+buffer 8 (plaintex)	n	<Space>jo	Compiler output
+buffer 8 (plaintex)	n	<Space>js	Spelling suggestions
+buffer 8 (plaintex)	n	<Space>jt	Table of contents
+buffer 8 (plaintex)	n	<Space>jv	Preview PDF / jump to cursor
+buffer 8 (plaintex)	n	<Space>jw	Add word to dictionary
+buffer 8 (plaintex)	n	<Space>sS	LSP Workspace Symbols
+buffer 8 (plaintex)	n	<Space>ss	LSP Symbols
+buffer 8 (plaintex)	n	K	Hover
+buffer 8 (plaintex)	n	gD	Goto Declaration
+buffer 8 (plaintex)	n	gI	Goto Implementation
+buffer 8 (plaintex)	n	gd	Goto Definition
+buffer 8 (plaintex)	n	gr	References
+buffer 8 (plaintex)	n	gy	Goto T[y]pe Definition
+buffer 9 (bib)	i	<F7>	
+buffer 9 (bib)	i	<Plug>(vimtex-cmd-create)	
+buffer 9 (bib)	i	]]	
+buffer 9 (bib)	n	,lC	
+buffer 9 (bib)	n	,lG	
+buffer 9 (bib)	n	,lI	
+buffer 9 (bib)	n	,lK	
+buffer 9 (bib)	n	,lT	
+buffer 9 (bib)	n	,lX	
+buffer 9 (bib)	n	,lc	
+buffer 9 (bib)	n	,le	
+buffer 9 (bib)	n	,lg	
+buffer 9 (bib)	n	,li	
+buffer 9 (bib)	n	,lk	
+buffer 9 (bib)	n	,ll	
+buffer 9 (bib)	n	,lm	
+buffer 9 (bib)	n	,lo	
+buffer 9 (bib)	n	,lq	
+buffer 9 (bib)	n	,lt	
+buffer 9 (bib)	n	,lv	
+buffer 9 (bib)	n	,lx	
+buffer 9 (bib)	n	<Plug>(vimtex-clean)	
+buffer 9 (bib)	n	<Plug>(vimtex-clean-full)	
+buffer 9 (bib)	n	<Plug>(vimtex-cmd-change)	
+buffer 9 (bib)	n	<Plug>(vimtex-cmd-create)	
+buffer 9 (bib)	n	<Plug>(vimtex-cmd-delete)	
+buffer 9 (bib)	n	<Plug>(vimtex-cmd-toggle-frac)	
+buffer 9 (bib)	n	<Plug>(vimtex-cmd-toggle-star)	
+buffer 9 (bib)	n	<Plug>(vimtex-compile)	
+buffer 9 (bib)	n	<Plug>(vimtex-compile-output)	
+buffer 9 (bib)	n	<Plug>(vimtex-compile-selected)	
+buffer 9 (bib)	n	<Plug>(vimtex-compile-ss)	
+buffer 9 (bib)	n	<Plug>(vimtex-context-menu)	
+buffer 9 (bib)	n	<Plug>(vimtex-errors)	
+buffer 9 (bib)	n	<Plug>(vimtex-info)	
+buffer 9 (bib)	n	<Plug>(vimtex-info-full)	
+buffer 9 (bib)	n	<Plug>(vimtex-log)	
+buffer 9 (bib)	n	<Plug>(vimtex-reload)	
+buffer 9 (bib)	n	<Plug>(vimtex-reload-state)	
+buffer 9 (bib)	n	<Plug>(vimtex-status)	
+buffer 9 (bib)	n	<Plug>(vimtex-status-all)	
+buffer 9 (bib)	n	<Plug>(vimtex-stop)	
+buffer 9 (bib)	n	<Plug>(vimtex-stop-all)	
+buffer 9 (bib)	n	<Plug>(vimtex-toc-open)	
+buffer 9 (bib)	n	<Plug>(vimtex-toc-toggle)	
+buffer 9 (bib)	n	<Plug>(vimtex-toggle-main)	
+buffer 9 (bib)	n	<Plug>(vimtex-view)	
+buffer 9 (bib)	n	<Space>K	Vimtex Docs
+buffer 9 (bib)	n	<Space>cl	Lsp Info
+buffer 9 (bib)	n	<Space>cr	Rename
+buffer 9 (bib)	n	<Space>sS	LSP Workspace Symbols
+buffer 9 (bib)	n	<Space>ss	LSP Symbols
+buffer 9 (bib)	n	K	Hover
+buffer 9 (bib)	n	[A	Prev Parameter End
+buffer 9 (bib)	n	[C	Prev Class End
+buffer 9 (bib)	n	[F	Prev Function End
+buffer 9 (bib)	n	[a	Prev Parameter Start
+buffer 9 (bib)	n	[c	Prev Class Start
+buffer 9 (bib)	n	[f	Prev Function Start
+buffer 9 (bib)	n	]A	Next Parameter End
+buffer 9 (bib)	n	]C	Next Class End
+buffer 9 (bib)	n	]F	Next Function End
+buffer 9 (bib)	n	]a	Next Parameter Start
+buffer 9 (bib)	n	]c	Next Class Start
+buffer 9 (bib)	n	]f	Next Function Start
+buffer 9 (bib)	n	cs$	
+buffer 9 (bib)	n	csc	
+buffer 9 (bib)	n	csd	
+buffer 9 (bib)	n	cse	
+buffer 9 (bib)	n	ds$	
+buffer 9 (bib)	n	dsc	
+buffer 9 (bib)	n	dsd	
+buffer 9 (bib)	n	dse	
+buffer 9 (bib)	n	gD	Goto Declaration
+buffer 9 (bib)	n	gI	Goto Implementation
+buffer 9 (bib)	n	gd	Goto Definition
+buffer 9 (bib)	n	gr	References
+buffer 9 (bib)	n	gy	Goto T[y]pe Definition
+buffer 9 (bib)	n	ts$	
+buffer 9 (bib)	n	tsD	
+buffer 9 (bib)	n	tsc	
+buffer 9 (bib)	n	tsd	
+buffer 9 (bib)	n	tse	
+buffer 9 (bib)	n	tsf	
+buffer 9 (bib)	o	<Plug>(vimtex-a$)	
+buffer 9 (bib)	o	<Plug>(vimtex-aP)	
+buffer 9 (bib)	o	<Plug>(vimtex-ac)	
+buffer 9 (bib)	o	<Plug>(vimtex-ad)	
+buffer 9 (bib)	o	<Plug>(vimtex-ae)	
+buffer 9 (bib)	o	<Plug>(vimtex-am)	
+buffer 9 (bib)	o	<Plug>(vimtex-i$)	
+buffer 9 (bib)	o	<Plug>(vimtex-iP)	
+buffer 9 (bib)	o	<Plug>(vimtex-ic)	
+buffer 9 (bib)	o	<Plug>(vimtex-id)	
+buffer 9 (bib)	o	<Plug>(vimtex-ie)	
+buffer 9 (bib)	o	<Plug>(vimtex-im)	
+buffer 9 (bib)	o	[A	Prev Parameter End
+buffer 9 (bib)	o	[C	Prev Class End
+buffer 9 (bib)	o	[F	Prev Function End
+buffer 9 (bib)	o	[a	Prev Parameter Start
+buffer 9 (bib)	o	[c	Prev Class Start
+buffer 9 (bib)	o	[f	Prev Function Start
+buffer 9 (bib)	o	]A	Next Parameter End
+buffer 9 (bib)	o	]C	Next Class End
+buffer 9 (bib)	o	]F	Next Function End
+buffer 9 (bib)	o	]a	Next Parameter Start
+buffer 9 (bib)	o	]c	Next Class Start
+buffer 9 (bib)	o	]f	Next Function Start
+buffer 9 (bib)	o	a$	
+buffer 9 (bib)	o	ac	
+buffer 9 (bib)	o	ad	
+buffer 9 (bib)	o	ae	
+buffer 9 (bib)	o	i$	
+buffer 9 (bib)	o	ic	
+buffer 9 (bib)	o	id	
+buffer 9 (bib)	o	ie	
+buffer 9 (bib)	v	<F6>	
+buffer 9 (bib)	v	<F7>	
+buffer 9 (bib)	v	<Plug>(vimtex-a$)	
+buffer 9 (bib)	v	<Plug>(vimtex-aP)	
+buffer 9 (bib)	v	<Plug>(vimtex-ac)	
+buffer 9 (bib)	v	<Plug>(vimtex-ad)	
+buffer 9 (bib)	v	<Plug>(vimtex-ae)	
+buffer 9 (bib)	v	<Plug>(vimtex-am)	
+buffer 9 (bib)	v	<Plug>(vimtex-cmd-create)	
+buffer 9 (bib)	v	<Plug>(vimtex-cmd-toggle-frac)	
+buffer 9 (bib)	v	<Plug>(vimtex-compile-selected)	
+buffer 9 (bib)	v	<Plug>(vimtex-i$)	
+buffer 9 (bib)	v	<Plug>(vimtex-iP)	
+buffer 9 (bib)	v	<Plug>(vimtex-ic)	
+buffer 9 (bib)	v	<Plug>(vimtex-id)	
+buffer 9 (bib)	v	<Plug>(vimtex-ie)	
+buffer 9 (bib)	v	<Plug>(vimtex-im)	
+buffer 9 (bib)	v	[A	Prev Parameter End
+buffer 9 (bib)	v	[C	Prev Class End
+buffer 9 (bib)	v	[F	Prev Function End
+buffer 9 (bib)	v	[a	Prev Parameter Start
+buffer 9 (bib)	v	[c	Prev Class Start
+buffer 9 (bib)	v	[f	Prev Function Start
+buffer 9 (bib)	v	]A	Next Parameter End
+buffer 9 (bib)	v	]C	Next Class End
+buffer 9 (bib)	v	]F	Next Function End
+buffer 9 (bib)	v	]a	Next Parameter Start
+buffer 9 (bib)	v	]c	Next Class Start
+buffer 9 (bib)	v	]f	Next Function Start
+buffer 9 (bib)	v	a$	
+buffer 9 (bib)	v	ac	
+buffer 9 (bib)	v	ad	
+buffer 9 (bib)	v	ae	
+buffer 9 (bib)	v	i$	
+buffer 9 (bib)	v	ic	
+buffer 9 (bib)	v	id	
+buffer 9 (bib)	v	ie	
+buffer 9 (bib)	v	tsD	
+buffer 9 (bib)	v	tsd	
+buffer 9 (bib)	v	tsf	
+buffer 9 (bib)	x	<F6>	
+buffer 9 (bib)	x	<F7>	
+buffer 9 (bib)	x	<Plug>(vimtex-a$)	
+buffer 9 (bib)	x	<Plug>(vimtex-aP)	
+buffer 9 (bib)	x	<Plug>(vimtex-ac)	
+buffer 9 (bib)	x	<Plug>(vimtex-ad)	
+buffer 9 (bib)	x	<Plug>(vimtex-ae)	
+buffer 9 (bib)	x	<Plug>(vimtex-am)	
+buffer 9 (bib)	x	<Plug>(vimtex-cmd-create)	
+buffer 9 (bib)	x	<Plug>(vimtex-cmd-toggle-frac)	
+buffer 9 (bib)	x	<Plug>(vimtex-compile-selected)	
+buffer 9 (bib)	x	<Plug>(vimtex-i$)	
+buffer 9 (bib)	x	<Plug>(vimtex-iP)	
+buffer 9 (bib)	x	<Plug>(vimtex-ic)	
+buffer 9 (bib)	x	<Plug>(vimtex-id)	
+buffer 9 (bib)	x	<Plug>(vimtex-ie)	
+buffer 9 (bib)	x	<Plug>(vimtex-im)	
+buffer 9 (bib)	x	[A	Prev Parameter End
+buffer 9 (bib)	x	[C	Prev Class End
+buffer 9 (bib)	x	[F	Prev Function End
+buffer 9 (bib)	x	[a	Prev Parameter Start
+buffer 9 (bib)	x	[c	Prev Class Start
+buffer 9 (bib)	x	[f	Prev Function Start
+buffer 9 (bib)	x	]A	Next Parameter End
+buffer 9 (bib)	x	]C	Next Class End
+buffer 9 (bib)	x	]F	Next Function End
+buffer 9 (bib)	x	]a	Next Parameter Start
+buffer 9 (bib)	x	]c	Next Class Start
+buffer 9 (bib)	x	]f	Next Function Start
+buffer 9 (bib)	x	a$	
+buffer 9 (bib)	x	ac	
+buffer 9 (bib)	x	ad	
+buffer 9 (bib)	x	ae	
+buffer 9 (bib)	x	i$	
+buffer 9 (bib)	x	ic	
+buffer 9 (bib)	x	id	
+buffer 9 (bib)	x	ie	
+buffer 9 (bib)	x	tsD	
+buffer 9 (bib)	x	tsd	
+buffer 9 (bib)	x	tsf	
+global	c	"	Closeopen action for '""' pair
+global	c	'	Closeopen action for "''" pair
+global	c	(	Open action for "()" pair
+global	c	)	Close action for "()" pair
+global	c	<BS>	MiniPairs <BS>
+global	c	<C-S>	Toggle Flash Search
+global	c	<S-CR>	Redirect Cmdline
+global	c	[	Open action for "[]" pair
+global	c	]	Close action for "[]" pair
+global	c	`	Closeopen action for "``" pair
+global	c	{	Open action for "{}" pair
+global	c	}	Close action for "{}" pair
+global	i	"	Closeopen action for '""' pair
+global	i	'	Closeopen action for "''" pair
+global	i	(	Open action for "()" pair
+global	i	)	Close action for "()" pair
+global	i	,	
+global	i	.	
+global	i	;	
+global	i	<BS>	MiniPairs <BS>
+global	i	<C-B>	Scroll Backward
+global	i	<C-F>	Scroll Forward
+global	i	<C-S>	Save File
+global	i	<C-U>	:help i_CTRL-U-default
+global	i	<C-W>	:help i_CTRL-W-default
+global	i	<CR>	MiniPairs <CR>
+global	i	<Esc>	Escape and Clear hlsearch
+global	i	<M-j>	Move Down
+global	i	<M-k>	Move Up
+global	i	<S-Tab>	vim.snippet.jump if active, otherwise <S-Tab>
+global	i	<Tab>	vim.snippet.jump if active, otherwise <Tab>
+global	i	[	Open action for "[]" pair
+global	i	]	Close action for "[]" pair
+global	i	`	Closeopen action for "``" pair
+global	i	{	Open action for "{}" pair
+global	i	}	Close action for "{}" pair
+global	n	%	
+global	n	&	:help &-default
+global	n	;	
+global	n	<C-/>	Terminal (Root Dir)
+global	n	<C-B>	Scroll Backward
+global	n	<C-Down>	Decrease Window Height
+global	n	<C-F>	Scroll Forward
+global	n	<C-H>	Go to Left Window
+global	n	<C-K>	Go to Upper Window
+global	n	<C-L>	Go to Right Window
+global	n	<C-Left>	Decrease Window Width
+global	n	<C-Right>	Increase Window Width
+global	n	<C-S>	Save File
+global	n	<C-Space>	Treesitter Incremental Selection
+global	n	<C-Up>	Increase Window Height
+global	n	<C-W><C-D>	Show diagnostics under the cursor
+global	n	<C-W><Space>	Window Hydra Mode (which-key)
+global	n	<C-W>d	Show diagnostics under the cursor
+global	n	<C-_>	which_key_ignore
+global	n	<Down>	Down
+global	n	<Esc>	Escape and Clear hlsearch
+global	n	<F10>	Step over
+global	n	<F11>	Step into
+global	n	<F12>	Step out
+global	n	<F5>	Attach / continue MCU
+global	n	<F6>	Pause MCU
+global	n	<F7>	Step instruction
+global	n	<F8>	Run to cursor
+global	n	<F9>	Breakpoint
+global	n	<M-j>	Move Down
+global	n	<M-k>	Move Up
+global	n	<NL>	Go to Lower Window
+global	n	<Plug>(MatchitNormalBackward)	
+global	n	<Plug>(MatchitNormalForward)	
+global	n	<Plug>(MatchitNormalMultiBackward)	
+global	n	<Plug>(MatchitNormalMultiForward)	
+global	n	<Plug>PlenaryTestFile	
+global	n	<S-F11>	Step out
+global	n	<S-F5>	Disconnect debugger
+global	n	<Space>,	Buffers
+global	n	<Space>-	Split Window Below
+global	n	<Space>.	Toggle Scratch Buffer
+global	n	<Space>/	Grep (Root Dir)
+global	n	<Space>:	Command History
+global	n	<Space><Space>	Find Files (Root Dir)
+global	n	<Space><Tab><Tab>	New Tab
+global	n	<Space><Tab>[	Previous Tab
+global	n	<Space><Tab>]	Next Tab
+global	n	<Space><Tab>d	Close Tab
+global	n	<Space><Tab>f	First Tab
+global	n	<Space><Tab>l	Last Tab
+global	n	<Space><Tab>o	Close Other Tabs
+global	n	<Space>?	Buffer Keymaps (which-key)
+global	n	<Space>E	Explorer Snacks (cwd)
+global	n	<Space>K	Keywordprg
+global	n	<Space>L	LazyVim Changelog
+global	n	<Space>S	Select Scratch Buffer
+global	n	<Space>`	Switch to Other Buffer
+global	n	<Space>aH	Arduino health check
+global	n	<Space>aR	Restart Arduino language server
+global	n	<Space>aS	Close serial monitor
+global	n	<Space>aa	Arduino actions
+global	n	<Space>ab	Select board
+global	n	<Space>ac	Compile sketch
+global	n	<Space>ae	Build output
+global	n	<Space>ah	Arduino guide
+global	n	<Space>ai	Sketch settings
+global	n	<Space>ak	Stop Arduino task
+global	n	<Space>al	Find + install library
+global	n	<Space>an	New sketch
+global	n	<Space>ao	Board options / bootloader
+global	n	<Space>ap	Select serial port
+global	n	<Space>ar	Serial baud rate
+global	n	<Space>as	Serial monitor
+global	n	<Space>au	Build + upload sketch
+global	n	<Space>aw	Arduino workspace
+global	n	<Space>bD	Delete Buffer and Window
+global	n	<Space>bP	Delete Non-Pinned Buffers
+global	n	<Space>bb	Switch to Other Buffer
+global	n	<Space>bd	Delete Buffer
+global	n	<Space>bi	Delete Invisible Buffers
+global	n	<Space>bj	Pick Buffer
+global	n	<Space>bl	Delete Buffers to the Left
+global	n	<Space>bo	Delete Other Buffers
+global	n	<Space>bp	Toggle Pin
+global	n	<Space>br	Delete Buffers to the Right
+global	n	<Space>cF	Format Injected Langs
+global	n	<Space>cS	LSP references/definitions/... (Trouble)
+global	n	<Space>cb	Build project
+global	n	<Space>cd	Line Diagnostics
+global	n	<Space>cf	Format
+global	n	<Space>cm	Mason
+global	n	<Space>co	Open build errors
+global	n	<Space>cs	Symbols (Trouble)
+global	n	<Space>dB	Breakpoint Condition
+global	n	<Space>dC	Run to Cursor
+global	n	<Space>dO	Step Over
+global	n	<Space>dP	Pause
+global	n	<Space>da	Run with Args
+global	n	<Space>db	Toggle Breakpoint
+global	n	<Space>dc	Run/Continue
+global	n	<Space>de	Eval
+global	n	<Space>dg	Go to Line (No Execute)
+global	n	<Space>di	Step Into
+global	n	<Space>dj	Down
+global	n	<Space>dk	Up
+global	n	<Space>dl	Run Last
+global	n	<Space>do	Step Out
+global	n	<Space>dph	Toggle Profiler Highlights
+global	n	<Space>dpp	Toggle Profiler
+global	n	<Space>dps	Profiler Scratch Buffer
+global	n	<Space>dr	Toggle REPL
+global	n	<Space>ds	Session
+global	n	<Space>dt	Terminate
+global	n	<Space>du	STM32 debug workspace
+global	n	<Space>dw	Widgets
+global	n	<Space>e	Explorer Snacks (root dir)
+global	n	<Space>fB	Buffers (all)
+global	n	<Space>fE	Explorer Snacks (cwd)
+global	n	<Space>fF	Find Files (cwd)
+global	n	<Space>fR	Recent (cwd)
+global	n	<Space>fT	Terminal (cwd)
+global	n	<Space>fb	Buffers
+global	n	<Space>fc	Find Config File
+global	n	<Space>fe	Explorer Snacks (root dir)
+global	n	<Space>ff	Find Files (Root Dir)
+global	n	<Space>fg	Find Files (git-files)
+global	n	<Space>fn	New File
+global	n	<Space>fp	Projects
+global	n	<Space>fr	Recent
+global	n	<Space>ft	Terminal (Root Dir)
+global	n	<Space>gB	Git Browse (open)
+global	n	<Space>gD	Git Diff (origin)
+global	n	<Space>gG	Lazygit (cwd)
+global	n	<Space>gI	GitHub Issues (all)
+global	n	<Space>gL	Git Log (cwd)
+global	n	<Space>gP	GitHub Pull Requests (all)
+global	n	<Space>gS	Git Stash
+global	n	<Space>gY	Git Browse (copy)
+global	n	<Space>gb	Git Blame Line
+global	n	<Space>gd	Git Diff (hunks)
+global	n	<Space>gf	Git Current File History
+global	n	<Space>gg	Lazygit (Root Dir)
+global	n	<Space>gi	GitHub Issues (open)
+global	n	<Space>gl	Git Log
+global	n	<Space>gp	GitHub Pull Requests (open)
+global	n	<Space>gs	Git Status
+global	n	<Space>jh	LaTeX guide
+global	n	<Space>jn	New LaTeX note
+global	n	<Space>l	Lazy
+global	n	<Space>mH	MCU health check
+global	n	<Space>mM	Memory inspector
+global	n	<Space>mP	Peripheral watches
+global	n	<Space>mR	Refresh halted target
+global	n	<Space>mW	Memory watchpoint
+global	n	<Space>ma	Disassembly at PC
+global	n	<Space>mb	Build firmware
+global	n	<Space>mc	Configure + index
+global	n	<Space>md	Attach MCU debugger
+global	n	<Space>mf	Flash with ST-LINK
+global	n	<Space>mh	MCU guide
+global	n	<Space>mi	Project MCU settings
+global	n	<Space>mk	Stop build task
+global	n	<Space>ml	Logpoint
+global	n	<Space>mo	OpenOCD server
+global	n	<Space>mp	Select CMake preset
+global	n	<Space>mq	Disconnect debugger
+global	n	<Space>mr	CPU registers
+global	n	<Space>ms	Serial monitor
+global	n	<Space>mt	Register change history
+global	n	<Space>mu	Debug workspace
+global	n	<Space>mv	Debug view picker
+global	n	<Space>mw	Add variable watch
+global	n	<Space>mz	Firmware sections/size
+global	n	<Space>n	Notification History
+global	n	<Space>qS	Select Session
+global	n	<Space>qd	Don't Save Current Session
+global	n	<Space>ql	Restore Last Session
+global	n	<Space>qq	Quit All
+global	n	<Space>qs	Restore Session
+global	n	<Space>s"	Registers
+global	n	<Space>s/	Search History
+global	n	<Space>sB	Grep Open Buffers
+global	n	<Space>sC	Commands
+global	n	<Space>sD	Buffer Diagnostics
+global	n	<Space>sG	Grep (cwd)
+global	n	<Space>sH	Highlights
+global	n	<Space>sM	Man Pages
+global	n	<Space>sR	Resume
+global	n	<Space>sT	Todo/Fix/Fixme
+global	n	<Space>sW	Visual selection or word (cwd)
+global	n	<Space>sa	Autocmds
+global	n	<Space>sb	Buffer Lines
+global	n	<Space>sc	Command History
+global	n	<Space>sd	Diagnostics
+global	n	<Space>sg	Grep (Root Dir)
+global	n	<Space>sh	Help Pages
+global	n	<Space>si	Icons
+global	n	<Space>sj	Jumps
+global	n	<Space>sk	Keymaps
+global	n	<Space>sl	Location List
+global	n	<Space>sm	Marks
+global	n	<Space>sn	+noice
+global	n	<Space>sna	Noice All
+global	n	<Space>snd	Dismiss All
+global	n	<Space>snh	Noice History
+global	n	<Space>snl	Noice Last Message
+global	n	<Space>snt	Noice Picker (Telescope/FzfLua)
+global	n	<Space>sp	Search for Plugin Spec
+global	n	<Space>sq	Quickfix List
+global	n	<Space>sr	Search and Replace
+global	n	<Space>st	Todo
+global	n	<Space>su	Undotree
+global	n	<Space>sw	Visual selection or word (Root Dir)
+global	n	<Space>uA	Toggle Tabline
+global	n	<Space>uC	Colorschemes
+global	n	<Space>uD	Toggle Dimming
+global	n	<Space>uF	Toggle Auto Format (Buffer)
+global	n	<Space>uI	Inspect Tree
+global	n	<Space>uL	Toggle Relative Number
+global	n	<Space>uS	Toggle Smooth Scroll
+global	n	<Space>uT	Toggle Treesitter Highlight
+global	n	<Space>uZ	Toggle Zoom Mode
+global	n	<Space>ua	Toggle Animations
+global	n	<Space>ub	Toggle Dark Background
+global	n	<Space>uc	Toggle Conceal Level
+global	n	<Space>ud	Toggle Diagnostics
+global	n	<Space>uf	Toggle Auto Format (Global)
+global	n	<Space>ug	Toggle Indent Guides
+global	n	<Space>uh	Toggle Inlay Hints
+global	n	<Space>ui	Inspect Pos
+global	n	<Space>ul	Toggle Line Numbers
+global	n	<Space>un	Dismiss All Notifications
+global	n	<Space>up	Toggle Mini Pairs
+global	n	<Space>ur	Redraw / Clear hlsearch / Diff Update
+global	n	<Space>us	Toggle Spelling
+global	n	<Space>uw	Toggle Wrap
+global	n	<Space>uz	Toggle Zen Mode
+global	n	<Space>wd	Delete Window
+global	n	<Space>wm	Toggle Zoom Mode
+global	n	<Space>xL	Location List (Trouble)
+global	n	<Space>xQ	Quickfix List (Trouble)
+global	n	<Space>xT	Todo/Fix/Fixme (Trouble)
+global	n	<Space>xX	Buffer Diagnostics (Trouble)
+global	n	<Space>xl	Location List
+global	n	<Space>xq	Quickfix List
+global	n	<Space>xt	Todo (Trouble)
+global	n	<Space>xx	Diagnostics (Trouble)
+global	n	<Space>|	Split Window Right
+global	n	<Up>	Up
+global	n	F	
+global	n	H	Prev Buffer
+global	n	L	Next Buffer
+global	n	N	Prev Search Result
+global	n	S	Flash Treesitter
+global	n	T	
+global	n	Y	:help Y-default
+global	n	[%	
+global	n	[<C-L>	:lpfile
+global	n	[<C-Q>	:cpfile
+global	n	[<C-T>	:ptprevious
+global	n	[<Space>	Add empty line above cursor
+global	n	[A	:rewind
+global	n	[B	Move buffer prev
+global	n	[D	Jump to the first diagnostic in the current buffer
+global	n	[L	:lrewind
+global	n	[Q	:crewind
+global	n	[T	:trewind
+global	n	[a	:previous
+global	n	[b	Prev Buffer
+global	n	[d	Prev Diagnostic
+global	n	[e	Prev Error
+global	n	[l	:lprevious
+global	n	[q	Previous Trouble/Quickfix Item
+global	n	[t	Previous Todo Comment
+global	n	[w	Prev Warning
+global	n	]%	
+global	n	]<C-L>	:lnfile
+global	n	]<C-Q>	:cnfile
+global	n	]<C-T>	:ptnext
+global	n	]<Space>	Add empty line below cursor
+global	n	]A	:last
+global	n	]B	Move buffer next
+global	n	]D	Jump to the last diagnostic in the current buffer
+global	n	]L	:llast
+global	n	]Q	:clast
+global	n	]T	:tlast
+global	n	]a	:next
+global	n	]b	Next Buffer
+global	n	]d	Next Diagnostic
+global	n	]e	Next Error
+global	n	]l	:lnext
+global	n	]q	Next Trouble/Quickfix Item
+global	n	]t	Next Todo Comment
+global	n	]w	Next Warning
+global	n	f	
+global	n	g%	
+global	n	gO	vim.lsp.buf.document_symbol()
+global	n	g[	Move to left "around"
+global	n	g]	Move to right "around"
+global	n	gc	Toggle comment
+global	n	gcO	Add Comment Above
+global	n	gcc	Toggle comment line
+global	n	gco	Add Comment Below
+global	n	gra	vim.lsp.buf.code_action()
+global	n	gri	vim.lsp.buf.implementation()
+global	n	grn	vim.lsp.buf.rename()
+global	n	grr	vim.lsp.buf.references()
+global	n	grt	vim.lsp.buf.type_definition()
+global	n	grx	vim.lsp.codelens.run()
+global	n	gx	Opens filepath or URI under cursor with the system handler (file explorer, web browser, …)
+global	n	j	Down
+global	n	k	Up
+global	n	n	Next Search Result
+global	n	s	Flash
+global	n	t	
+global	o	%	
+global	o	;	
+global	o	<C-Space>	Treesitter Incremental Selection
+global	o	<Plug>(MatchitOperationBackward)	
+global	o	<Plug>(MatchitOperationForward)	
+global	o	<Plug>(MatchitOperationMultiBackward)	
+global	o	<Plug>(MatchitOperationMultiForward)	
+global	o	F	
+global	o	N	Prev Search Result
+global	o	R	Treesitter Search
+global	o	S	Flash Treesitter
+global	o	T	
+global	o	[%	
+global	o	]%	
+global	o	a	Around textobject
+global	o	al	Around last textobject
+global	o	an	Around next textobject
+global	o	f	
+global	o	g%	
+global	o	g[	Move to left "around"
+global	o	g]	Move to right "around"
+global	o	gc	Comment textobject
+global	o	i	Inside textobject
+global	o	il	Inside last textobject
+global	o	in	Inside next textobject
+global	o	n	Next Search Result
+global	o	r	Remote Flash
+global	o	s	Flash
+global	o	t	
+global	s	<C-B>	Scroll Backward
+global	s	<C-F>	Scroll Forward
+global	s	<C-S>	Save File
+global	s	<Esc>	Escape and Clear hlsearch
+global	s	<M-j>	Move Down
+global	s	<M-k>	Move Up
+global	s	<S-Tab>	vim.snippet.jump if active, otherwise <S-Tab>
+global	s	<Tab>	vim.snippet.jump if active, otherwise <Tab>
+global	t	<C-/>	Terminal (Root Dir)
+global	t	<C-_>	which_key_ignore
+global	v	#	:help v_#-default
+global	v	%	
+global	v	*	:help v_star-default
+global	v	;	
+global	v	<C-B>	Scroll Backward
+global	v	<C-F>	Scroll Forward
+global	v	<C-S>	Save File
+global	v	<C-S>	Save File
+global	v	<C-Space>	Treesitter Incremental Selection
+global	v	<Down>	Down
+global	v	<Esc>	Escape and Clear hlsearch
+global	v	<M-j>	Move Down
+global	v	<M-k>	Move Up
+global	v	<Plug>(MatchitVisualBackward)	
+global	v	<Plug>(MatchitVisualForward)	
+global	v	<Plug>(MatchitVisualMultiBackward)	
+global	v	<Plug>(MatchitVisualMultiForward)	
+global	v	<Plug>(MatchitVisualTextObject)	
+global	v	<S-Tab>	vim.snippet.jump if active, otherwise <S-Tab>
+global	v	<Space>cF	Format Injected Langs
+global	v	<Space>cf	Format
+global	v	<Space>de	Eval
+global	v	<Space>gB	Git Browse (open)
+global	v	<Space>gY	Git Browse (copy)
+global	v	<Space>sW	Visual selection or word (cwd)
+global	v	<Space>sr	Search and Replace
+global	v	<Space>sw	Visual selection or word (Root Dir)
+global	v	<Tab>	vim.snippet.jump if active, otherwise <Tab>
+global	v	<Up>	Up
+global	v	<lt>	
+global	v	>	
+global	v	@	:help v_@-default
+global	v	F	
+global	v	N	Prev Search Result
+global	v	Q	:help v_Q-default
+global	v	R	Treesitter Search
+global	v	S	Flash Treesitter
+global	v	T	
+global	v	[%	
+global	v	[n	Select previous node
+global	v	]%	
+global	v	]n	Select next node
+global	v	a	Around textobject
+global	v	a%	
+global	v	al	Around last textobject
+global	v	an	Around next textobject
+global	v	f	
+global	v	g%	
+global	v	g[	Move to left "around"
+global	v	g]	Move to right "around"
+global	v	gc	Toggle comment
+global	v	gra	vim.lsp.buf.code_action()
+global	v	gx	Opens filepath or URI under cursor with the system handler (file explorer, web browser, …)
+global	v	i	Inside textobject
+global	v	il	Inside last textobject
+global	v	in	Inside next textobject
+global	v	j	Down
+global	v	k	Up
+global	v	n	Next Search Result
+global	v	s	Flash
+global	v	t	
+global	x	#	:help v_#-default
+global	x	%	
+global	x	*	:help v_star-default
+global	x	;	
+global	x	<C-S>	Save File
+global	x	<C-Space>	Treesitter Incremental Selection
+global	x	<Down>	Down
+global	x	<M-j>	Move Down
+global	x	<M-k>	Move Up
+global	x	<Plug>(MatchitVisualBackward)	
+global	x	<Plug>(MatchitVisualForward)	
+global	x	<Plug>(MatchitVisualMultiBackward)	
+global	x	<Plug>(MatchitVisualMultiForward)	
+global	x	<Plug>(MatchitVisualTextObject)	
+global	x	<Space>cF	Format Injected Langs
+global	x	<Space>cf	Format
+global	x	<Space>de	Eval
+global	x	<Space>gB	Git Browse (open)
+global	x	<Space>gY	Git Browse (copy)
+global	x	<Space>sW	Visual selection or word (cwd)
+global	x	<Space>sr	Search and Replace
+global	x	<Space>sw	Visual selection or word (Root Dir)
+global	x	<Up>	Up
+global	x	<lt>	
+global	x	>	
+global	x	@	:help v_@-default
+global	x	F	
+global	x	N	Prev Search Result
+global	x	Q	:help v_Q-default
+global	x	R	Treesitter Search
+global	x	S	Flash Treesitter
+global	x	T	
+global	x	[%	
+global	x	[n	Select previous node
+global	x	]%	
+global	x	]n	Select next node
+global	x	a	Around textobject
+global	x	a%	
+global	x	al	Around last textobject
+global	x	an	Around next textobject
+global	x	f	
+global	x	g%	
+global	x	g[	Move to left "around"
+global	x	g]	Move to right "around"
+global	x	gc	Toggle comment
+global	x	gra	vim.lsp.buf.code_action()
+global	x	gx	Opens filepath or URI under cursor with the system handler (file explorer, web browser, …)
+global	x	i	Inside textobject
+global	x	il	Inside last textobject
+global	x	in	Inside next textobject
+global	x	j	Down
+global	x	k	Up
+global	x	n	Next Search Result
+global	x	s	Flash
+global	x	t	

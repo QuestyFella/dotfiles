@@ -1,0 +1,191 @@
+config-version = 2
+
+after-startup-command = []
+
+# Tell SketchyBar which workspace is focused (see ~/.config/sketchybar/plugins/spaces.sh).
+exec-on-workspace-change = ['/bin/bash', '-c',
+    '/opt/homebrew/bin/sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE'
+]
+on-focus-changed = [
+    'exec-and-forget /opt/homebrew/bin/sketchybar --trigger aerospace_workspace_change',
+    'exec-and-forget ~/.local/bin/aerospace-wine-fix',  # EASy68K/Wine window layouts
+]
+
+start-at-login = true
+
+enable-normalization-flatten-containers = true
+enable-normalization-opposite-orientation-for-nested-containers = true
+
+accordion-padding = 30
+
+default-root-container-layout = 'tiles'
+default-root-container-orientation = 'auto'
+
+on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
+
+automatically-unhide-macos-hidden-apps = false
+
+persistent-workspaces = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
+
+[exec]
+    inherit-env-vars = true
+[exec.env-vars]
+    PATH = '/opt/homebrew/bin:/opt/homebrew/sbin:${PATH}'
+
+[gaps]
+    inner.horizontal = 8
+    inner.vertical =   8
+    outer.left =       4
+    outer.bottom =     4
+    outer.top =        44  # room for SketchyBar (height 34)
+    outer.right =      4
+
+[key-mapping]
+    preset = 'qwerty'
+
+[mode.main.binding]
+
+    alt-slash = 'layout tiles horizontal vertical'
+    alt-comma = 'layout accordion horizontal vertical'
+
+    alt-enter = 'exec-and-forget open -n /System/Applications/Utilities/Terminal.app'
+    ctrl-alt-n = '''exec-and-forget osascript -e '
+    tell application "iTerm2"
+        create window with default profile
+    end tell'
+    '''
+
+    ctrl-h = 'focus left'
+    ctrl-j = 'focus down'
+    ctrl-k = 'focus up'
+    ctrl-l = 'focus right'
+
+    ctrl-shift-h = 'move left'
+    ctrl-shift-j = 'move down'
+    ctrl-shift-k = 'move up'
+    ctrl-shift-l = 'move right'
+
+    alt-1 = 'workspace 1'
+    alt-2 = 'workspace 2'
+    alt-3 = 'workspace 3'
+    alt-4 = 'workspace 4'
+    alt-5 = 'workspace 5'
+    alt-6 = 'workspace 6'
+    alt-7 = 'workspace 7'
+    alt-8 = 'workspace 8'
+    alt-9 = 'workspace 9'
+
+    alt-b = 'workspace B'
+    alt-d = 'workspace D'
+    alt-e = 'workspace E'
+    alt-j = 'workspace J'
+    alt-s = 'workspace S'
+    alt-t = 'workspace T'
+    alt-w = 'workspace W'
+    alt-v = 'workspace V'
+    alt-y = 'workspace Y'
+    alt-x = 'close'
+
+    alt-shift-1 = 'move-node-to-workspace 1'
+    alt-shift-2 = 'move-node-to-workspace 2'
+    alt-shift-3 = 'move-node-to-workspace 3'
+    alt-shift-4 = 'move-node-to-workspace 4'
+    alt-shift-5 = 'move-node-to-workspace 5'
+    alt-shift-6 = 'move-node-to-workspace 6'
+    alt-shift-7 = 'move-node-to-workspace 7'
+    alt-shift-8 = 'move-node-to-workspace 8'
+    alt-shift-9 = 'move-node-to-workspace 9'
+
+    alt-shift-b = 'move-node-to-workspace B'
+    alt-shift-d = 'move-node-to-workspace D'
+    alt-shift-e = 'move-node-to-workspace E'
+    alt-shift-j = 'move-node-to-workspace J'
+    alt-shift-s = 'move-node-to-workspace S'
+    alt-shift-t = 'move-node-to-workspace T'
+    alt-shift-w = 'move-node-to-workspace W'
+    alt-shift-v = 'move-node-to-workspace V'
+    alt-shift-y = 'move-node-to-workspace Y'
+
+    alt-tab = 'workspace-back-and-forth'
+    alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
+
+    alt-f = 'fullscreen'
+
+    alt-r = 'mode resize'
+
+    alt-shift-semicolon = 'mode service'
+
+    ctrl-shift-left = 'join-with left'
+    ctrl-shift-down = 'join-with down'
+    ctrl-shift-up = 'join-with up'
+    ctrl-shift-right = 'join-with right'
+
+[mode.resize.binding]
+    h = 'resize width -50'
+    j = 'resize height +50'
+    k = 'resize height -50'
+    l = 'resize width +50'
+    shift-h = 'resize width -100'
+    shift-j = 'resize height +100'
+    shift-k = 'resize height -100'
+    shift-l = 'resize width +100'
+    minus = 'resize smart -50'
+    equal = 'resize smart +50'
+    shift-minus = 'resize smart -100'
+    shift-equal = 'resize smart +100'
+    b = 'balance-sizes'
+    enter = 'mode main'
+    esc = 'mode main'
+
+[mode.service.binding]
+    esc = ['reload-config', 'mode main']
+    r = ['flatten-workspace-tree', 'mode main']
+    f = ['layout floating tiling', 'mode main']
+    backspace = ['close-all-windows-but-current', 'mode main']
+
+    alt-shift-h = ['join-with left', 'mode main']
+    alt-shift-j = ['join-with down', 'mode main']
+    alt-shift-k = ['join-with up', 'mode main']
+    alt-shift-l = ['join-with right', 'mode main']
+
+# Hammerspoon widgets (~/.hammerspoon/widgets) float above everything — never tile them
+[[on-window-detected]]
+    if.app-id = 'org.hammerspoon.Hammerspoon'
+    run = 'layout floating'
+
+[[on-window-detected]]
+    if.app-id = 'com.apple.systempreferences'
+    run = 'layout floating'
+
+[[on-window-detected]]
+    if.app-id = 'com.apple.finder'
+    run = 'layout floating'
+
+# Cheat sheet (Hyper + /, ~/.local/bin/cheatsheet) floats on top instead of tiling
+[[on-window-detected]]
+    if.app-id = 'org.alacritty'
+    if.window-title-regex-substring = '^Shortcuts$'
+    run = 'layout floating'
+
+# EASy68K (Wine) — Wine windows have no bundle id and look like dialogs to AeroSpace,
+# so tile the main windows explicitly and keep everything on workspace E (Hyper + E).
+[[on-window-detected]]
+    if.app-name-regex-substring = 'wine'
+    if.window-title-regex-substring = '^(EASy68K Editor|EASy68K Simulator|Sim68K I/O)|\.[Ss]68$'
+    run = ['layout tiling', 'move-node-to-workspace E']
+# Untitled-at-detection Wine windows land here; ~/.local/bin/aerospace-wine-fix re-tiles
+# the main ones once their titles appear.
+
+[[on-window-detected]]
+    if.app-name-regex-substring = 'wine'
+    run = ['layout floating', 'move-node-to-workspace E']
+
+# Spotify lives on workspace S (Hyper + S)
+[[on-window-detected]]
+    if.app-id = 'com.spotify.client'
+    run = 'move-node-to-workspace S'
+
+# Discord lives on workspace D (Hyper + D)
+[[on-window-detected]]
+    if.app-id = 'com.hnc.Discord'
+    run = 'move-node-to-workspace D'

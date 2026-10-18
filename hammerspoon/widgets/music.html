@@ -1,0 +1,105 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  .pane { right: 24px; bottom: 24px; width: 216px; font-size: 12px; padding: 14px 14px 10px; --hinge: right center; --enter: swing-in-right; --leave: swing-out-right; }
+  .art { display: block; width: 100%; aspect-ratio: 1; margin-bottom: 10px; border: 1px solid var(--accent); box-sizing: border-box;
+         background: var(--surface); object-fit: cover; transition: opacity .25s; }
+  .art.fade { opacity: 0; }
+  .title { font-weight: 700; white-space: nowrap; overflow: hidden; }
+  .title span { display: inline-block; }
+  .title.scroll span { animation: marquee 10s linear infinite; padding-right: 3ch; }
+  @keyframes marquee { 0%, 15% { transform: translateX(0) } 85%, 100% { transform: translateX(var(--shift)) } }
+  .artist { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .bar { margin-top: 6px; white-space: nowrap; overflow: hidden; line-height: 1.1; }
+  .bar .fill { color: var(--accent); } .bar .rest { color: var(--dim); opacity: .5; }
+  .times { display: flex; justify-content: space-between; align-items: baseline; font-size: 11px; }
+  .eq { letter-spacing: 1px; font-size: 13px; }
+  .ctl { margin-top: 4px; display: flex; justify-content: space-between; white-space: nowrap; }
+  .heart.on { color: var(--red); text-shadow: 0 0 10px rgba(var(--red-rgb), .7); }
+  .heart.off-bridge { opacity: .35; }
+  .heart.pop { animation: heartpop .5s cubic-bezier(.34,1.56,.64,1); display: inline-block; }
+  @keyframes heartpop { 0% { transform: scale(1) } 35% { transform: scale(1.6) rotate(-8deg) } 100% { transform: scale(1) } }
+</style></head>
+<body>
+<div class="pane">
+  <div class="tag"><span class="glyph">♫</span>spotify</div>
+  <div class="close">[x]</div>
+  <img class="art row" id="art" alt="">
+  <div class="row title acc" id="title"><span>—</span></div>
+  <div class="row artist sub" id="artist">&nbsp;</div>
+  <div class="row bar" id="bar"></div>
+  <div class="row times k"><span id="pos">00:00</span><span><span class="eq acc" id="eq">▁▁▁▁▁</span> <span id="state">paused</span></span><span id="dur">00:00</span></div>
+  <div class="row ctl"><span class="btn" data-a="prev">[ ⏮ ]</span> <span class="btn" id="pp" data-a="playpause">[ ▶ ]</span> <span class="btn" data-a="next">[ ⏭ ]</span>  <span class="btn heart" id="heart" data-a="like" title="like · ⌃⌥⌘L">[ &#xf08a; ]</span></div>
+  <div class="hint">⌃⌥⌘m</div>
+</div>
+<script src="base.js"></script>
+<script>
+  const $ = (id) => document.getElementById(id);
+  const BLOCKS = "▁▂▃▄▅▆▇█";
+  let BAR = 30; // progress bar length in characters, fitted to the card width below
+  const fmt = (s) => `${String(Math.floor(s / 60)).padStart(2, "0")}:${String(Math.floor(s % 60)).padStart(2, "0")}`;
+  document.querySelectorAll(".btn[data-a]").forEach((b) => b.addEventListener("click", () => send(b.dataset.a)));
+  let playing = false, lastArt = null, lastTitle = null;
+  addEventListener("load", () => {
+    const probe = Object.assign(document.createElement("span"), { textContent: "█".repeat(10) });
+    $("bar").appendChild(probe);
+    BAR = Math.floor($("bar").clientWidth / (probe.getBoundingClientRect().width / 10));
+    probe.remove();
+  });
+
+  // equaliser: random block heights while playing
+  setInterval(() => {
+    $("eq").textContent = [0, 1, 2, 3, 4].map(() => playing ? BLOCKS[Math.floor(Math.random() * 8)] : "▁").join("");
+  }, 140);
+
+  // album art: preload, then fade the new cover in
+  function showArt(url) {
+    const el = $("art");
+    if (!url) { el.removeAttribute("src"); return; }
+    const img = new Image();
+    img.onload = () => {
+      if (url !== lastArt) return; // a newer track arrived while this one loaded
+      el.classList.add("fade");
+      setTimeout(() => { el.src = url; el.classList.remove("fade"); }, 150);
+    };
+    img.src = url;
+  }
+
+  function heart(h) {
+    const el = $("heart"), was = el.classList.contains("on");
+    el.classList.toggle("on", !!h.liked);
+    el.classList.toggle("off-bridge", !h.bridge);
+    el.title = h.bridge ? "like · ⌃⌥⌘L" : "needs the Spicetify hs-bridge extension";
+    el.textContent = h.liked ? "[ \uf004 ]" : "[ \uf08a ]"; // Nerd Font solid / outline heart
+    if (h.liked && !was) { el.classList.remove("pop"); void el.offsetWidth; el.classList.add("pop"); }
+  }
+
+  function update(s) {
+    if (!s.running) {
+      lastTitle = lastArt = null; showArt(null); // force a full redraw when Spotify comes back (even on the same song)
+      $("title").innerHTML = "<span>spotify not running</span>";
+      $("artist").textContent = "hyper+s to open it"; playing = false; $("state").textContent = "offline"; return;
+    }
+    playing = s.playing;
+    heart({ liked: s.liked, bridge: s.bridge });
+    $("state").textContent = s.playing ? "playing" : "paused";
+    $("pp").textContent = s.playing ? "[ ⏸ ]" : "[ ▶ ]";
+    if (s.title !== lastTitle) {
+      lastTitle = s.title;
+      $("title").innerHTML = `<span>${esc(s.title)}</span>`;
+      $("artist").textContent = s.artist + (s.album ? "  ·  " + s.album : "");
+      requestAnimationFrame(() => {
+        const t = $("title"), over = t.firstChild.offsetWidth - t.offsetWidth;
+        t.classList.toggle("scroll", over > 0);
+        t.style.setProperty("--shift", `-${over + 24}px`);
+      });
+    }
+    if (s.art !== lastArt) { lastArt = s.art; showArt(s.art); }
+    const n = s.duration ? Math.round(Math.min(1, s.position / s.duration) * BAR) : 0;
+    $("bar").innerHTML = `<span class="fill">${"█".repeat(n)}</span><span class="rest">${"░".repeat(BAR - n)}</span>`;
+    $("pos").textContent = fmt(s.position);
+    $("dur").textContent = fmt(s.duration);
+  }
+</script>
+</body></html>

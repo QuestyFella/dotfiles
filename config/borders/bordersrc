@@ -1,0 +1,5 @@
+#!/bin/zsh
+# JankyBorders startup config; colours follow the active theme (`theme` re-runs this live).
+source "$HOME/.config/themes/current/palette.sh"
+exec /opt/homebrew/bin/borders style=round width=5.0 hidpi=on \
+  active_color=0xff$ACCENT inactive_color=0x00$SURFACE1 blacklist="Hammerspoon" "$@"

@@ -1,0 +1,4 @@
+#!/bin/zsh
+# Triggered by Karabiner (Hyper + D): go to workspace D and open Discord.
+/opt/homebrew/bin/aerospace workspace D
+/usr/bin/open -a /Applications/Discord.app
