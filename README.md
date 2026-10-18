@@ -3,7 +3,22 @@
 macOS rice: **AeroSpace** tiling + **SketchyBar** + **JankyBorders**, TUI-style **Hammerspoon** widgets,
 and a `theme` command that recolours the whole desktop at once.
 
-![screenshot](screenshots/desktop.png)
+![widgets](screenshots/widgets.jpg)
+
+<table>
+  <tr>
+    <td><img src="screenshots/theme-tokyo-night.jpg" alt="Tokyo Night"><br><sub>Tokyo Night</sub></td>
+    <td><img src="screenshots/theme-catppuccin-mocha.jpg" alt="Catppuccin Mocha"><br><sub>Catppuccin Mocha</sub></td>
+    <td><img src="screenshots/theme-gruvbox-dark.jpg" alt="Gruvbox Dark"><br><sub>Gruvbox Dark</sub></td>
+  </tr>
+  <tr>
+    <td><img src="screenshots/theme-rose-pine.jpg" alt="Rosé Pine"><br><sub>Rosé Pine</sub></td>
+    <td><img src="screenshots/theme-kanagawa.jpg" alt="Kanagawa"><br><sub>Kanagawa</sub></td>
+    <td><img src="screenshots/theme-catppuccin-latte.jpg" alt="Catppuccin Latte"><br><sub>Catppuccin Latte (light)</sub></td>
+  </tr>
+</table>
+
+<sub>Same desktop, one <code>theme</code> command each: Neovim, btop, Alacritty, the bar and borders all follow.</sub>
 
 | | |
 |---|---|
@@ -32,6 +47,10 @@ Neovim (running instances too), Zed, VS Code, Zellij, btop, the widgets, and opt
 Spotify (Spicetify), Discord (Vencord) and Firefox (Pywalfox). Palettes live in
 `config/themes/palettes/<name>.sh`.
 
+| `theme` picker | Bar dropdown |
+|---|---|
+| ![theme picker](screenshots/theme-picker.jpg) | ![bar dropdown](screenshots/bar-dropdown.jpg) |
+
 ## Widgets
 
 TUI-style panes that swing in on a 3D hinge and follow the current theme. All toggled with **Hyper** (hold Caps Lock):
@@ -46,6 +65,12 @@ TUI-style panes that swing in on a 3D hinge and follow the current theme. All to
 | Hyper + H | System stats (htop-style) |
 | Hyper + A | Calendar agenda (needs the helper app, see below) |
 | Hyper + G | Wallpaper picker for the current theme |
+
+| Agenda + system stats | Wallpaper picker |
+|---|---|
+| ![agenda and stats](screenshots/agenda-stats.jpg) | ![wallpaper picker](screenshots/wallpaper-picker.jpg) |
+
+<sub>Todo items and calendar events in the screenshots are demo data. Wallpapers belong to their artists and aren't included in the repo.</sub>
 
 The full shortcut list is in [`config/SHORTCUTS.md`](config/SHORTCUTS.md) (**Hyper + /** shows it as a floating cheat sheet).
 
